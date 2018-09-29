@@ -1,0 +1,1581 @@
+﻿html{
+   overflow-x:hidden;
+}
+
+.body {
+    background:#F8F8F8; 
+}
+/** 登录页面 **/
+.login-box {
+    width:400px; max-height:480px; background:#FFF;border-radius:10px;box-shadow:2px 2px 2px #ccc;margin:100px auto 0 auto; 
+}
+.logo-box {
+    width:400px;text-align:center;height:80px; 
+}
+.logo-box img {
+   width:250px; margin-top:30px;
+}
+.login-row {
+  width:300px;height:50px;
+}
+.layui-layer-msg{
+   position: fixed; top: 40%
+}
+/**我的工作平台Platform start**/
+
+.header {
+    width:100%; height : 60px; background:#23262E; position: fixed; z-index: 1000
+}
+.header .logo{
+     width:200px; height:60px; line-height: 60px; display: inline-block;
+}
+.header-box{
+    width: 1200px; margin: 0 auto; position: relative;
+}
+.header img {
+    width: 200px
+}
+.header .top_menu{
+     position:absolute; right: 0px; top: 0px;
+}
+.header .top_menu .layui-nav-item{
+      display:inline-block; height: 60px; line-height: 60px; 
+}
+
+.header .top_menu .layui-nav-item a{  
+      min-width: 60px;  text-align: center;  /*padding: 8px 20px;*/
+}
+.header .top_menu .layui-nav-item a i{
+      position:relative; right: 3px;
+}
+.header .top_menu .layui-nav-item a img{
+     width:40px; border-radius: 50%
+}
+
+.setting {
+    float: right; color: #CBCBCB; margin-top: 22px; font-size: 18px 
+}
+.app-box{
+   width: 1100px; margin: 0 auto;
+}
+
+.app-box > .unit-box{
+   width: 100%;
+}
+
+.app-box > .unit-box > .title{
+    width: 100%; height:  50px; border-bottom: 1px solid #eee; position: relative;
+}
+.app-box > .unit-box > .title > span{
+    padding: 0 50px 0 20px; background: #F9F9F9; position: relative; top: 35px; font-size: 18px;
+}
+.app-box > .unit-box > .title > r{
+    float: right; background: #F9F9F9; position: relative; top: 39px; font-size: 14px; padding: 0 10px; cursor: pointer; color: #666
+}
+.app-box > .unit-box > .title > r:hover{
+    color: #0072ff
+}
+.app-box > .unit-box > .title > span > r{
+    color: #F00;
+}
+.app-box > .unit-box > .seacher{
+     width: 100%; height: 50px; line-height: 40px; text-align: right; position: relative;
+}
+.app-box > .unit-box > .seacher > input{
+   width:  300px; height: 30px; line-height: 30px; border-radius: 30px; border:1px solid #e5e5e5; margin-top: 10px; text-indent: 20px; padding-right: 30px; color: #666
+}
+.app-box > .unit-box > .seacher > i {
+    position: absolute; top: 17px; right: 10px; color: #666;  font-size: 16px; cursor: pointer;
+}
+.app-l-box{ 
+    width: 1100px; min-height: 200px; 
+ }
+ .app-l-box .app{
+   width: 260px; height: 125px; background: #fff;  border-radius: 10px;  box-shadow: 2px 2px 2px #ccc; cursor: pointer; float: left; margin: 15px 7px;
+ }
+ .app-l-box .app:hover{
+  box-shadow: 8px 8px 10px #aaa; 
+ }
+.app-l-box .app > .logo{
+   width: 80px; height: 120px; border-radius: 5px; overflow: hidden; margin: 10px; float: left;
+}
+.app-l-box .app > .logo > img{
+   width: 80px;height:80px; border-radius: 5px;
+}
+.app-l-box .app > .logo > .option{
+   width: 80px; height: 40px; text-align: center; color: #999; font-size: 16px;
+}
+.app-l-box .app > .text{ 
+    width: 150px;  float: left;
+ }
+ .app-l-box .app > .text > .title{ 
+    width: 150px; height: 50px; line-height: 25px; font-size: 16px; font-weight: bold;display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+ }
+ .app-l-box .app > .text > .info{
+    width: 150px; height: 56px; line-height: 18px; font-size: 12px; color: #999; 
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+ }
+ .app-l-box .add{
+     width:260px; text-align: center;  color: #ccc
+ }
+ .app-l-box .add i{
+     font-size: 40px; margin-top: 25px;
+ }
+ .app-l-box .add .add-text{ 
+      font-size: 20px;
+  }
+.app-l-box .add:hover{
+   color: #00c1de
+}
+
+/**添加学校页面**/
+.addschool{
+   overflow-y: auto; overflow-x: hidden;
+}
+.addschool > .one >.left{
+   width: 180px; 
+}
+.addschool > .one >.right{
+   width: 470px; 
+}
+.up-img-box{
+   width: 160px; height: 200px; border:1px solid #eee;
+}
+.up-img-box > .img{
+    width: 150px; height: 150px; margin: 5px;
+}
+.up-img-box > .img >img{
+      width: 150px; height: 150px;  border-radius: 5px
+}
+.up-img-box > .up-btn{
+     width: 150px; height: 50px;
+}
+.upload-btn-img{
+   width: 150px; height: 30px;  line-height:30px; text-align: center; color: #fff; border-radius: 4px; display: inline-block; background: #1E9FFF
+}
+.layui-input, .layui-select, .layui-textarea {
+    height: 35px
+}
+.upload-btn-img:hover{
+    color: #fff;
+}
+.addschool   .layui-input-block{
+    margin-left:120px;
+}
+.addschool   .layui-input-block em{
+   color: #999; font-size: 12px; line-height: 25px;
+}
+.addschool  .layui-form-label{
+    width:90px;
+} 
+.addschool  .layui-form-label em{
+    color: #f00;
+}  
+.info-shcoolid-box{
+    width: 650px;
+}
+
+.btn-list{
+   width: 100%; height: 50px;  text-align:right;
+}
+.sub-app{
+   width: 175px; height: 75px; border-radius: 5px; border:1px solid #ddd;  margin: 10px 22px; cursor: pointer; position: relative;
+} 
+.choose{
+   border: 1px solid #1E9FFF;
+}
+.sub-app > .left{
+    width: 60px; height:60px; margin: 7.5px
+}
+.sub-app > .left > img{
+   width: 60px; height: 60px; border-radius: 5px;
+}
+.sub-app > .right{
+   width: 95px; height:  75px;
+}
+.sub-app > .right > .title{
+    width: 95px; line-height: 20px; height: 40px; margin-top: 7.5px;
+     display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.sub-app > .right >  .version{
+    color: #999; font-size:12px; line-height: 25px;
+}
+.sub-app > .select-app, .school-choose-box > .select-app{
+   width: 25px; height: 23px;  background: url("../Images/s-right.png")no-repeat; background-size: 100% 100%; position: absolute; right: 0px ; bottom: -1px; display: none;
+}
+.no-app{
+   width: 678px; text-align: center; line-height: 300px; color: #999; font-size: 16px;
+}
+.school-choose-box{
+    width: 200px; height: 50px; border: 1px solid #ccc; border-radius: 4px;  position: relative;  cursor: pointer; font-size: 16px;  float: left;
+}
+.school-choose-box span{ color:  #666;display: inline-block; width: 100%;text-indent: 10px; margin-top: 3px;}
+.school-choose-box em{ color: #aaa; display: inline-block; width:  100%; font-size: 12px; text-indent: 10px;}
+.school-choose{
+    border: 1px solid #1E9FFF
+}
+/*添加编辑管理员页面*/
+.school-seacher-box {
+     width: 250px; height: 40px; margin-top: 26px; margin-right: 80px; position: relative;
+}
+.school-seacher-box input{
+    width: 110px; height: 30px; line-height: 30px; border-radius: 20px; border:1px solid #ccc; text-indent: 15px; font-weight: 200; float: right; position: absolute; right: -25px;
+}
+.school-seacher-box i{
+     position: absolute; top: 6px ; right: -17px; color: #999; font-size: 18px;
+ }
+/**我的工作平台Platform end**/
+
+/***首页页面样式 start**/
+
+
+.index-box{
+   width: 1200px; margin: 0px auto; 
+}
+.index-box .left{
+    width: 150px;
+}
+.index-box .left a{
+    width: 150px; height: 35px;  line-height: 35px;  color: #666; display: inline-block; margin-bottom: 10px; font-size: 16px; text-indent: 15px
+}
+.index-box .left a.active,.index-box .left a:hover{
+    background: #e0e6ee; color: #1E9FFF; border-radius: 3px;
+}
+.index-box .left a.back{
+    background: #eee; color: #666666; font-size: 14px; height: 30px; line-height: 30px;text-indent: 10px ;border-radius:3px;
+}
+.index-box .left a.back:hover{
+    background: #e0e0e0;
+}
+.index-box .right{
+   width: 1030px; 
+}
+.index-box .right > .table-box{
+   width: 1030px;  box-shadow: 2px 2px 2px #ccc;
+}
+.index-box .right > .title{
+     width: 1030px; height: 50px;  
+}
+.index-box .right > .title > .t-l{
+   font-size: 18px; color: #333;
+}
+.index-box .right > .title > .t-l > a.btn{
+   width: 120px; height: 30px; line-height: 30px; background: #1E9FFF;  border-radius: 5px; display: inline-block; color: #fff; font-size: 14px; text-align: center;
+}
+.index-box .right > .title > .t-l > a.btn:hover{
+   box-shadow: 0px 0px 2px #1E9FFF
+}
+.index-box  .right .table-box{
+   width: 1030px;  background: #FFF; border-radius: 5px;
+}
+o.text{
+    height: 50px; line-height: 50px; display: inline-block; font-size: 16px; color: #666
+}
+o.option{
+    height: 50px; display: inline-block; line-height: 50px;
+}
+
+o > btn{
+   float: right;
+}
+o > btn > a{
+     padding: 4px 10px; border:1px solid #ccc; border-radius: 3px;  color: #666; position: relative; display: inline-block; height: 20px; line-height: 20px;
+} 
+o > btn > a.current{
+    border:1px solid #1E9FFF; background: #1E9FFF;color: #fff
+}
+o > btn > a > ul{
+   position: absolute; width: 100%; display: none; top: 29px; left: 0px; border: 1px solid #ccc; background: #fff url() 0 0 no-repeat;z-index: 100; 
+}
+o > btn > a > ul >li{
+    width: 100%; height: 33px; line-height: 33px;  text-align: center; border-radius: 2px;
+}
+o > btn > a > ul >li:hover{
+    background: #e0e6ee;
+}
+o > btn > a:hover{
+    box-shadow: 0px 0px 2px #1E9FFF
+}
+
+
+.layui-form-checked i, .layui-form-checked:hover i{
+     color: #1E9FFF
+}
+.layui-form-checkbox{
+   height:16px; line-height: 16px;padding-right:14px
+}
+ .layui-form-checkbox i{
+   width: 18px;font-size :14px;
+}
+.layui-form-checked i,  .layui-table  .layui-form-checked:hover i{
+   color: #1E9FFF
+}
+.layui-form-checked, .layui-form-checked:hover{
+    border-color:#1E9FFF; 
+}
+
+.sex-box > .layui-form-checkbox{
+   height:25px; line-height: 22px;padding-right:14px
+}
+
+
+.layui-table td, .layui-table th{
+   padding: 8px 10px; text-align: center;
+}
+.layui-table td[name] a{
+    color: #1E9FFF; cursor: pointer;
+}
+.layui-table td.option{
+   cursor: pointer;  position: relative; width: 80px
+}
+.layui-table td.option ul{
+    width: 80px;   position: absolute; border: 1px solid #ccc; border-radius: 2px; background: #fff;  top: 35px; display: none; z-index: 999
+}
+.layui-table td.option ul >li{
+   width: 80px; height: 30px; line-height: 30px;
+}
+.layui-table td.option ul >li:hover{
+    background: #e0e6ee;
+}
+.table{
+   border-radius: 5px; width: 100%;
+}
+.is-empty{
+   width: 100%; height: 300px; margin-top: 200px;
+}
+.is-empty i{
+    font-size: 60px; color: #DAE6FA
+}
+.is-empty  span{
+   display: inline-block; color: #A4ADBE; width: 100%; margin-top: 20px;
+}
+.table-sub-box{
+   overflow-x: auto; width: 1030px;
+}
+/***首页页面样式 end**/
+
+/*导入Excel页面 start*/
+.import-box{
+   width: 678px; height: 410px; margin-left: 12px;
+}
+.import-box .title{
+    width: 678px; height: 80px; line-height: 80px;
+}
+.import-box .title a{
+   color: #317ef5
+}
+.up-btn-box{
+    width: 670px; height: 320px; background: #fafafa; border: 2px dashed #ccc; text-align: center; overflow: auto;
+}
+.up-btn-box img.file{
+   width: 80px; margin-top: 80px;
+}
+.up-btn-box  .btn{
+   font-size: 16px
+}
+.up-btn-box  span{
+   font-size: 20px; color: #999; 
+}
+.cloose-flie{
+
+}
+.loading-box{
+    margin-top: 120px;
+}
+/*导入Excel页面 end*/
+
+
+/*添加信息页面 start*/
+.user-add-box{
+    width: 1030px;   box-shadow: 2px 2px 2px #ccc; border-radius: 5px;  background: #FFF; padding-bottom: 80px; 
+}
+.user-add-box > .title{
+    width: 1030px; height:  80px ; line-height:  80px;  font-size: 16px; font-weight: bold; text-indent: 30px;
+}
+
+.user-add-box .left{
+     width: 270px;height: 430px; border-right: 1px solid #ddd;  text-align: center;
+}
+.user-add-box .left img{
+    width: 180px;height: 180px; border-radius: 50% ; margin-top:20px;
+}
+.user-add-box .right{
+   width:  600px;
+}
+.user-add-box .layui-form-label{
+   width: 90px;
+}
+.user-add-box .layui-form-label em{
+    color: #d70000
+}
+.user-add-box  .layui-input-block{
+    margin-left:120px;
+}
+.user-add-box .layui-form-checked,.user-add-box  .layui-form-checked:hover{
+    border-color:#1E9FFF;
+}
+.user-add-box .layui-form-checked i,.user-add-box .layui-form-checked:hover i{
+   color:#1E9FFF;
+}
+/*
+
+.layui-form-checked span, .layui-form-checked:hover span{
+     background-color:#1E9FFF;
+}
+*/
+/*添加信息页面 end*/
+
+/*年级班级管理页面 start*/
+.grade-box{
+     width: 250px; border:1px solid #e6e6e6; border-radius: 2px;
+}
+
+.grade-box ul li{
+    width: 250px; height: 38px; line-height: 38px; border-bottom: 1px dashed #ddd; text-indent: 20px; color: #666; cursor: pointer; position: relative;
+}
+.grade-box ul li > i{
+    position: absolute; left: -10px; top: 11px;
+}
+.grade-box ul li:hover,.grade-box ul li.active{
+     background: #e6f0ff; font-size: 16px; color: #3088f7
+}
+
+.grade-box ul li span{
+    position: absolute; right: 5px; font-size: 12px;  display: none;
+}
+.grade-box ul li span b{
+   color: #1E9FFF;  margin-right: 5px; font-weight: 500
+}
+.grade-box ul li span b.delete{
+    color: #e90000
+}
+.class-box{
+   width: 740px;
+}
+
+.add-grade{
+   width: 230px;
+}
+.add-grade input{
+   width: 150px; float: left; height: 30px
+}
+.add-grade a{
+    width: 27px; height: 27px; border:1px solid #c0d9fe; display: inline-block; float: left; margin: 0 5px; line-height: 28px; text-align: center; color: #4c96ff;font-size: 16px; font-weight: bold; border-radius: 2px;
+}
+.add-grade a:hover{
+   box-shadow: 0px 0px 3px #c0d9fe;
+}
+.sub-li input,.sub-li a{
+  margin-top: 4px;
+}
+.sub-li a{
+   text-indent: 0px;
+}
+.non-exist-geade{
+   width: 100%; height: 300px; line-height: 300px; text-align:center;color: #A4ADBE;
+}
+/*年级班级管理页面 end*/
+
+.auto-height{
+      height: 100px; width: 100%
+}
+
+.bottom-option-btn{
+   width: 100%; height: 60px; background: #fff; position: fixed; bottom: 0px; border-top: 1px solid #eee
+}
+.bottom-option-btn > div{
+    width: 1200px; height: 60px; margin:0 auto;
+}
+.bottom-option-btn > div > a{
+     width: 100px; height: 35px; line-height: 35px; border-radius: 5px; color: #fff; background: #1E9FFF ; display: inline-block; text-align: center;  margin-top: 15px
+}
+/***班级学生课程 start ***/
+.tab-pane{
+   width: 1030px; height: 30px; color: #ccc; line-height: 30px
+}
+.tab-pane span{
+    width: 50px; height:30px; line-height: 30px; text-align: center; display: inline-block; color: #666; margin: 0 10px;  cursor: pointer;
+}
+.tab-pane span.active{
+    border-bottom: 2px solid  #1E9FFF; color: #1E9FFF 
+}
+
+.title-course{
+     margin-top: -5px;
+}
+.title-course a{
+    width: 35px; height:25px; border:1px solid #ccc;  display: inline-block; line-height: 40px; text-align: center; margin-top: 10px; position: relative;top: 8px;
+}
+.title-course a i{
+   position: absolute; top: 4px; left: 15px;
+}
+.title-course a.upper{
+   border-radius: 3px 0 0 3px;
+}
+.title-course a.down{
+   border-radius: 0 3px 3px 0;
+}
+.title-course a:hover{
+   border:1px solid #1E9FFF; color: #1E9FFF
+}
+.course-table tbody tr:hover{
+     background-color: #FFF
+}
+.course-table thead tr th span{
+     color: #999; margin-left: 5px;
+}
+.course-table tbody tr td span{
+     color: #999; font-size: 12px; margin-top:5px; display: inline-block;
+}
+/***班级学生课程 end ***/
+
+/***课表设置 start ***/
+.setting-box {
+   width: 95%; border-radius: 5px; background: #fff; margin-left: 2.5%; box-shadow: 2px 2px 2px #ccc
+}
+.setting-box .title{
+   width: 100%; height: 40px; line-height: 40px;color:#333; text-indent: 20px; font-size: 16px;
+}
+.setting-box .layui-form-label{
+  width: 100px;
+}
+.setting-box .layui-form-label em{
+   color: #d70000
+}
+.setting-box .layui-input-block{
+   margin-left: 130px;
+}
+.setting-box .layui-input{
+   width: 80%
+}
+.table-time{
+   width: 100%; height: 35px; line-height: 35px; text-align: center; border:0px;
+}
+.number-add{
+    width: 100%; height: 35px; line-height: 35px; border-radius: 5px; border:1px solid #f3f3f3; text-align: center; font-size: 20px; cursor: pointer; color: #8ccefb; background: #f3f3f3
+}
+.number-add i{
+    margin-top: 9px;
+}
+.number-add:hover{
+  animation:myfirst 2s;
+}
+@keyframes myfirst
+{
+from {color: #8ccefb;}
+to {color:#1d90df;}
+}
+
+
+ .course-set-box .sub-table-box{
+    width: 96%;  background: #fff; border-radius: 5px; box-shadow: 2px 2px 2px #ccc; margin-left: 2%
+ }
+ .course-set-box .sub-table-box .title{
+   width: 100%; height: 60px; line-height: 70px; font-size: 16px; font-weight: bold; text-indent: 20px;
+ }
+ .sub-course-box {
+     width: 100%; height: 200px; padding-bottom: 20px;
+ }
+ .sub-course-box .left{
+    width: 170px; height: 200px; line-height: 200px; text-align:center; 
+ }
+ .sub-course-box .right .r-sub-box{
+     width: 250px; height: 200px; overflow-y: auto; overflow-x: hidden; border: 1px solid #eee;  border-radius: 5px;
+  }
+ .sub-course-box .right .r-sub-box ul li{
+    width: 90%; height: 30px; line-height: 30px; border:1px solid #1E9FFF ; color: #1E9FFF; text-align: center; margin: 8px 5%; border-radius: 3px; cursor: pointer;
+ }
+  .sub-course-box .right .r-sub-box ul li.active{
+      background: #1E9FFF; color: #FFF
+  }
+.sub-course-box .right .r-sub-box ul li:hover:not(.active){
+  background: #97d3ff; color: #FFF
+}
+.course-set-btn{
+  position: fixed; bottom: 0px; height:60px; background: #fff;  border-top: 1px solid #eee; width: 100%;text-align:end;
+}
+  .sub-course-box .right .r-sub-box .seacher-box{
+       width: 250px; height: 35px; line-height: 35px;
+  }
+  .sub-course-box .right .r-sub-box .seacher-box input{
+       width: 90%; height: 30px; border: 1px solid #ccc; border-radius: 3px; text-indent: 10px; margin-left: 5%; margin: 5px;
+  }
+  .sub-course-box .right .r-sub-box .teacher-list-box{
+     width: 100%;height: 165px; margin-top: 5px; overflow-y: auto; overflow-x: hidden;
+  }
+
+/***课表设置 end ***/
+/***用户详细信息页面 Teacherinfo start ***/
+.page-title{
+    width: 100%; height: 50px;
+}
+.t-info-box{
+    width: 1200px;  
+}
+.t-info-box .info-left-box{
+   width:330px;  background: #fff; box-shadow: 2px 2px 2px #ccc
+}
+.name-box {
+   width: 300px; height: 80px; border-bottom: 1px solid #efefef
+}
+.name-box  > .head{
+    width: 100px; height: 80px; 
+}
+.name-box  > .head img{
+   width: 60px; height: 60px;   border-radius: 50%; margin: 10px 20px;
+}
+.name-box  > .name{
+    width: 200px; height: 60px;  font-size: 16px;
+}
+.name-box  > .name > post{
+    font-size: 14px; color: #999
+}
+.info-bottom-box{
+    width: 300px;
+}
+.info-bottom-box .line-box{
+   width: 300px; height:  35px; line-height: 35px;
+}
+.info-bottom-box .line-box left{
+   width: 80px; color: #999; float: left;
+}
+.info-bottom-box .line-box right {
+   color: #333; margin-left: 20px; float: left;
+}
+.t-info-box .info-right-box {
+   width: 850px; height: auto; background: #FFF;  box-shadow: 2px 2px 2px #ccc
+}
+.info-right-box .layui-tab > .layui-tab-title > .layui-this{
+    color: #1E9FFF
+}
+.teacher-table-box{
+   width: 830px;  margin: 10px;
+}
+/***用户详细信息页面 Teacherinfo end ***/
+
+
+/***课表设置页面 CourseTableAll start ***/
+.grade-class-box{ 
+    width: 250px; border: 1px solid #e6e6e6; border-radius: 2px;
+}
+.grade-class-box > .grade-sub-box{
+    width: 125px;
+}
+.grade-class-box > .grade-sub-box li,.grade-class-box > .class-sub-box li{
+    width:125px; height: 40px; line-height: 40px; text-indent: 15px; border-bottom: 1px dashed #e6e6e6; cursor: pointer; position: relative;
+}
+.grade-class-box > .grade-sub-box li > i {
+     position: absolute;  top: 13px; right: 10px;
+}
+.grade-class-box > .class-sub-box,.grade-class-box > .grade-sub-box li.active, .grade-sub-box li:hover{
+     background: #f5f5f5
+} 
+.course-table-all{
+   width: 748px; text-align: center;
+}
+
+.grade-class-box .seacher-teacher{
+   width: 230px; height: 40px; position:relative;
+}
+.seacher-teacher-input{ 
+      height: 30px;
+}
+.grade-class-box .seacher-teacher i{
+    position: absolute; top: 13px; right:10px; color: #666; font-size: 16px
+}
+
+.td-enable{
+    cursor: pointer; background:#f4ffef; color: #6aaf40
+}
+.td-disable{
+   cursor: default; background:#efefef; color: #999
+}
+.td-activate{
+    background:#fdffe3; color: #c4ca6b
+}
+.td-default{
+    cursor: default; background:#FFF; color: #333
+}
+/***课表设置页面 CourseTableAll end ***/
+
+
+/*下载页面弹出层*/
+.layer-down-box{
+   width: 350px; height: 170px;
+}
+
+.layer-down-box span{
+    width: 350px; height: 50px; line-height:  50px; color: #999; text-align: center; display: inline-block;  margin-top: 50px;
+}
+.layer-down-box span img {
+    position: relative; right:10px;
+}
+.layer-down-box .layer-btn{
+    width: :350px; height: 50px; line-height: 50px; text-align: center;
+}
+.layer-down-box .layer-btn a{
+     margin-top: 15px;
+}
+
+/*右侧搜索按钮 start*/
+.right-search{
+   width: 60px; height: 60px; background: #23262E ; opacity: .8; color: #fff;  line-height: 60px; text-align: center; font-size: 40px; 
+   position: fixed; right: 0px; top: 150px; cursor: pointer;
+}
+.seach-right-box{
+   width: 280px; height: 100%; position: fixed; background: #3c4252;  right: -280px; top: 0px ; z-index: 0 ; 
+}
+
+.seach-right-box .title{
+   width: 280px; height: 40px; line-height:40px ; color: #FFF;  margin-top: 60px;  border-bottom: 1px solid #4b5369; text-indent: 8px
+}
+.seach-right-box .title i{
+   font-size: 16px; position: relative; right:2px; cursor: pointer;
+}
+.seacher-body{
+   width: 260px;
+}
+.s-block {
+  width: 100%; 
+}
+.s-block span{
+  width: 100%; height: 30px; line-height: 30px; color: #7d8089
+}
+.s-block .s-input{
+   width: 100%; height: 30px; line-height: 30px; border-radius: 3px; border:0px;  text-indent: 10px;
+}
+
+.s-btn-list{
+   width: 100%; height: 60px; line-height: 60px; position: absolute; bottom: 0px; left: 0px; text-align: center;
+}
+.s-btn-list .clean-btn{
+    color: #fff; width: 60px; height: 30px; display: inline-block; color: #ccc ; line-height: 26px ;
+}
+.s-btn-list .clean-btn:hover{
+ background: #23262E ; border-radius: 3px;
+}
+
+/*右侧搜索按钮 end*/
+
+
+
+/***锁屏样式 start ***/
+
+.admin-header-lock{width: 320px; height: 170px; padding: 20px; position: relative; text-align: center;}
+.admin-header-lock-img{width: 60px; height: 60px; margin: 0 auto;}
+.admin-header-lock-img img{width: 60px; height: 60px; border-radius: 100%;}
+.admin-header-lock-name{color: #009688;margin: 8px 0 15px 0;}
+.input_btn{ overflow: hidden; margin-bottom: 10px; }
+.admin-header-lock-input{width: 170px; color: #fff;background-color: #009688; float: left; margin:0 10px 0 40px; border:none;}
+.admin-header-lock-input::-webkit-input-placeholder {color:#fff;}
+.admin-header-lock-input::-moz-placeholder {color:#fff;}
+.admin-header-lock-input::-ms-input-placeholder {color:#fff;}
+.admin-header-lock-input:-moz-placeholder {color:#fff;}
+#unlock{ float: left; }
+#lock-box p{ color:#e60000;  }
+
+/***锁屏样式 end ***/
+
+
+
+
+/*评价页面 Assessment  start*/
+.ass-box{
+    
+}
+.ass-box .add-box{
+    width: 1030px; height: 50px; line-height: 50px;  background: #e7e7e7; text-indent: 10px; border-radius: 3px; color: #666;  font-size: 15px; cursor: pointer;
+}
+.ass-box .add-box:hover{
+    background: #cacaca ;
+}
+.ass-box .ass-group,.add-body{
+   width: 1030px;  height: auto;  background: #FFF;border-radius: 3px;  box-shadow: 0px 2px 3px #ccc;
+}
+.ass-box .ass-group .ass{
+    width: 1030px; height: auto;  
+}
+.ass-box .ass-group .ass .left{
+    width:900px;
+}
+.ass-box .ass-group .ass .left .title{
+    width: 900px; height: 40px; line-height: 50px;  color: #333; font-size: 15px; text-indent: 15px
+}
+.ass-box .ass-group .ass .left .desc{
+    width: 900px; height: 25px; line-height: 20px;  color: #999; font-size: 12px;text-indent: 15px
+}
+.ass-box .ass-group .ass .right{
+    width:130px; position: relative;
+}
+.ass-box .ass-group .ass .right a{
+    width: 100px; height: 65px; line-height: 65px; text-align: right; display: inline-block; font-size: 14px; color: #999;
+}
+.ass-box .ass-group .ass .right ul{
+    width: 80px;  border:1px solid #ccc; position: absolute; background: #FFF; right: 20px; top: 50px; border-radius: 2px;  z-index: 9
+}
+.ass-box .ass-group .ass .right ul li{
+   width: 80px ; height: 30px; line-height: 30px; text-align: center; cursor: pointer;
+}
+.ass-box .ass-group .ass .right ul li:hover{
+   background: #e0e6ee; 
+}
+.ass-box .ass-group .sub{
+   width: 985px; height: 60px;  border-bottom: 1px solid #eee;   margin-left: 15px;
+}
+.ass-box .ass-group .sub > .status{
+    width:  70px; height: 60px ; line-height: 60px; text-align: left; 
+}
+.ass-box .ass-group .sub > .status > a{
+    margin-top: 18px;
+}
+.ass-box .ass-group .sub > .content{
+   width: 815px;
+}
+.ass-box .ass-group .sub > .content .title{
+    width: 815px; height: 30px;  line-height: 40px;  color: #333;  font-size: 15px;
+}
+.ass-box .ass-group .sub > .content .desc{
+   width: 815px; height: 20px;  line-height: 20px;  color: #999; font-size: 12px;
+}
+.ass-box .ass-group .sub > .option{
+   width: 100px; position: relative;
+}
+.ass-box .ass-group .sub > .option a{
+    width: 100px; height: 65px; line-height: 65px; text-align: right; display: inline-block; font-size: 14px; color: #999;
+}
+.ass-box .ass-group .sub > .option ul{
+    width: 80px;  border:1px solid #ccc; position: absolute; background: #FFF; right: -15px; top: 50px; border-radius: 2px; z-index: 9
+}
+.ass-box .ass-group .sub > .option ul li{
+   width: 80px ; height: 30px; line-height: 30px; text-align: center; cursor: pointer;
+}
+.ass-box .ass-group .sub > .option ul li:hover{
+   background: #e0e6ee; 
+}
+.ass-box .ass-group .ass-add{
+    width: 1030px;line-height: 40px ; line-height: 40px; text-indent: 15px;
+}
+.ass-box .ass-group .ass-add a{
+   color: #1c90e6
+}
+.ass-btn,.up-ass-btn {
+    width: 120px;
+}
+.cancel{
+   background: #f0f0f0; color: #666;  border:1px solid #f0f0f0 ;
+}
+.cancel:hover{
+     background: #d5d5d5;border:1px solid #d5d5d5 ;
+}
+.option-add{
+     width: 1030px;height: 40px; line-height: 40px;  text-indent:65px;
+}
+.option-add a{
+   color: #1c90e6;
+}
+.option-text{
+     width: 900px; height: 50px; line-height: 50px; background: #fcf8e3; color: #8a6d3b; text-indent: 20px; margin-left: 65px
+}
+.group-option-box{
+   width: 900px; border: 1px solid #ddd; border-radius: 2px;margin-left: 65px
+}
+.group-option-box .parent-box{
+    width: 900px; height: 50px; line-height: 50px;
+}
+.group-option-box .parent-box .p-left{
+     width: 730px;  text-indent:20px;
+}
+.group-option-box .parent-box .p-left em{
+    font-size: 12px; color: #999; margin-left: 10px;  
+}
+.group-option-box .parent-box .p-right{
+     width: 140px;  color: #999;font-size: 12px;
+}
+ .group-option-box .parent-box .p-right a{
+     padding: 0 10px;color: #999; font-size: 12px;
+ }
+
+.group-option-box .child-box{
+    width: 860px; height: 50px; line-height: 50px; border-top: 1px solid #eee;
+}
+.group-option-box .child-box .c-left{
+     width: 710px;  text-indent:20px;
+}
+.group-option-box .child-box .c-left em{
+    font-size: 12px; color: #999; margin-left: 10px;  
+}
+.group-option-box .child-box .c-right{
+     width: 140px;  color: #999;font-size: 12px;
+}
+.group-option-box .child-box .c-right a{
+     padding: 0 10px;color: #999; font-size: 12px;
+ }
+.group-option-box .child-box .c-left a{
+  color: #1c90e6
+}
+.step-two-box{
+  width: 900px; margin-left: 65px;
+}
+.step-two-box .conditions{
+    width: 900px; min-height: 40px; 
+}
+.step-two-box .conditions .navbar-left{
+    width: 100px; height: 40px; line-height: 50px; text-indent: 20px;
+}
+.step-two-box .conditions .navbar-right{
+    width: 790px;  border-bottom: 1px solid #ddd
+}
+.step-two-box .conditions .navbar-right a{
+    background: #f1f1f1; color: #666; padding:3px 10px; display: inline-block; border-radius: 2px; margin: 8px; 
+}
+.step-two-box .conditions .navbar-right a.active{
+     color: #fff; background: #1E9FFF;
+}
+.step-two-box .conditions .navbar-right > .list-group{
+   width: 730px;
+}
+.step-two-box .conditions .navbar-right > .show-btn{
+   width: 60px; color: #1E9FFF; cursor: pointer;
+}
+.sub-title{
+    font-size: 16px; height: 40px; line-height: 40px; 
+}
+.teacher-group{
+    width: 900px; height: 50px; line-height: 50px; border-bottom: 1px solid #ddd;
+}
+.teacher-group .t-left{
+     width: 200px; font-size: 15px;
+}
+.teacher-group .t-right{
+   width: 700px;
+}
+
+/*评价页面 Assessment  end*/
+
+/*评价分数详情页面 start*/
+.top-option{
+   width: 1200px; height: 40px;
+}
+.top-option .top-left-box  a.back{
+    background: #eee; color: #666666; font-size: 14px; height: 30px; line-height: 30px;text-indent: 10px ;border-radius:3px; width: 150px;
+}
+.top-option .top-left-box  a.back:hover{
+    background: #e0e0e0;
+}
+.table-option-box{
+   width: 1198px; height: 50px; line-height: 50px; background: #fff; border:1px solid #dedede; border-bottom: 0px;
+}
+.table-option-box .text{
+   text-indent: 20px; font-size: 16px; color: #666;
+}
+.table-option-box .table-btn-list a{
+    margin-top: -5px
+}
+
+.left-ass-box{
+     width: 280px; height: auto; background: #fff; border-radius: 3px; border:1px solid #ededed;
+}
+.top-student-box{
+    width: 240px; height: 80px; border-bottom: 1px solid #ededed; 
+}
+.top-student-box > .head-img,.top-student-box > .head-img > img{
+     width: 50px; height: 50px; border-radius:50%;
+}
+.top-student-box > .name-info{
+   font-size: 16px
+}
+.top-student-box > .name-info > span{
+     display: inline-block; width: 100%; color: #999; font-size: 14px;
+}
+.top-student-box > .head-img >.head-text{
+    width:50px; height: 50px; background: #100000; color: #FFF; text-align: center; line-height: 50px; border-radius:  50%; font-size: 16px
+}
+.bottom-student-box{
+   width: 240px;
+}
+.bottom-student-box .line{
+   width: 240px; height: 40px; line-height: 40px; 
+}
+.bottom-student-box .line > .left-a{
+   width: 80px;
+}
+.bottom-student-box .line > .right-a{
+    width: 160px; color: #999
+}
+.student-more-info{
+   width: 240px; height: 50px; line-height: 50px; text-align: center; border-top: 1px solid #ededed; 
+}
+.student-more-info a{
+    font-size: 14px; color: #013be0
+}
+.right-ass-box{
+   width: 895px;  height: auto; 
+}
+.right-ass-box .title{
+    width: 855px; height: 50px; line-height: 50px;  border-bottom: 1px solid #ededed; font-size: 16px;
+}
+.right-ass-box .title em{
+   font-size: 12px; color:  #999;
+}
+.scoreinfo-box{
+   width:  855px;
+}
+.scoreinfo-box .col-sm-4 {
+   width: 33%; float: left; height: 80px; text-align: center; border-right: 1px solid #ededed;
+}
+.scoreinfo-box .col-sm-4 span,.scoreinfo-box .col-sm-4 em{
+   width: 100%; display: inline-block; 
+}
+.scoreinfo-box .col-sm-4 span {
+    color:#999
+}
+.scoreinfo-box .col-sm-4 em{
+    color: #327bef; font-size: 20px; 
+}
+.no-border{
+    border:0px;
+}
+.right-ass-box .info-ass-box{
+    width: 895px;  background: #fff; border-radius: 3px; border:1px solid #ededed;
+}
+.info-ass-box  .content-box{
+     line-height: 35px;  font-size: 15px; color: #666 ;width: 855px; font-size: 14px; padding: 10px
+}
+.info-ass-box  .content-box .empty-box{
+     line-height: 50px;  height: 50px; background: #fcf8e3 ; color: #8a6d3b; text-indent: 10px; font-size: 12px; width: 835px; border:1px solid #dfdbc6; border-radius:3px;
+} 
+.child-score-box{
+   width: 855px; border:1px solid #ededed; border-radius: 3px; 
+}
+.child-score-box .child-head{
+     width: 855px; height: 40px; line-height: 40px; background: #efefef
+}
+.child-score-box .child-head span{
+     display: inline-block; float: left; text-align: center; border: 1px solid #ededed; border-left: 0px; border-top:0px;
+}
+.child-score-box .child-head span.s1{
+   width: 350px;
+}
+.child-score-box .child-head span.s2{
+   width: 300px;
+}
+.child-score-box .child-head span.s3{
+   width: 100px;
+}
+.group-child{
+     border-top: 1px solid #ededed
+}
+.group-child .father-box{
+   width: 350px;  min-height: 35px;  border-right:  1px solid #ededed;text-indent: 10px; position: relative; color: #999; font-size: 12px;
+}
+
+.group-child .son-box{
+     width: 300px;  min-height: 35px; border-right:  1px solid #ededed;
+}
+.group-child .score-box{
+     width: 100px;  min-height: 35px; border-right:  1px solid #ededed;text-align: center;
+}
+.group-child .totle-box{
+     width: 100px;  min-height: 35px;  text-align: center; color: #999; font-size: 12px;
+}
+.group-child .son-box >span{
+   text-indent: 10px;
+}
+.group-child .son-box >span ,.group-child .score-box>span{
+    display:inline-block; height: 35px; line-height: 35px;  width: 100%; border-bottom: 1px solid #ededed;  color: #999; font-size: 12px; 
+}
+/*评价分数详情页面 end*/
+
+
+/**公用部分**/
+.input-bd-1{
+    border:0px; border-bottom: 1px solid #e6e6e6;
+}
+.box {
+  display: -moz-box;display: -webkit-box;display: box
+}
+
+.flex {
+  -moz-box-flex: 1; -webkit-box-flex: 1;box-flex: 1
+}
+
+.page-box{
+    text-align: right; 
+}
+
+.hide{
+   display: none;
+}
+
+#returnTop{
+    position: fixed; right: 10px; bottom: 80px; cursor: pointer; display: none;
+}
+
+@media (min-width: 1179px) {
+  
+  
+  .rili-body .head span{
+     width: 13.4%; display: inline-block;text-align: center; margin-top: 13px; color: #4a90e2
+   }
+  
+
+}
+
+
+/*教师输入评价页面 start*/
+
+.entry-title{
+   font-size: 20px;  line-height: 28px;
+}
+.content-body{
+   width: 100%; border-top: 1px solid #ededed
+}
+.content-tab{
+   width: 100%; background: #fff; float: left; position: relative; 
+}
+.content-tab > ul{
+    float: right;  position: absolute; top: -40px; height: 40px; right: 0px;
+}
+.content-tab > ul  li{
+    float: left; width: 150px; text-align: center; height:  40px; line-height: 40px; border:1px solid #ededed; color: #999; border-bottom:0px; border-radius: 3px 3px 0 0; margin-left: 10px; background: #fff; cursor: pointer;
+}
+.content-tab > ul li.active{
+     color: #1E9FFF;
+}
+.entry-score-box{
+    width: 1200px;
+}
+.entry-score-box > .left-score-box {
+    width: 200px; 
+}
+.entry-score-box > .left-score-box > ul {
+     width: 200px; margin-top: 20px;
+}
+.entry-score-box > .left-score-box > ul li{
+    width: 170px; padding: 5px 10px;  min-height: 20px;  margin-left: 10px; cursor: pointer; margin-bottom: 10px
+}
+.entry-score-box > .left-score-box > ul li.active{
+     background: #357be8; border-radius: 5px; color: #fff
+}
+.entry-score-box > .right-score-box{
+     width: 960px;
+}
+.entry-score-box > .right-score-box > .title{
+   width: 100%; height: 30px;line-height: 30px; font-size: 18px;
+}
+.entry-score-box > .right-score-box > .msg-info{
+     width: 100%; height: 30px;line-height: 30px; background: #f7f7f7; color:#999; text-indent: 10px; border-radius: 3px
+}
+.entry-score-box > .right-score-box > .person{
+     width: 100%; padding-bottom: 20px;
+}
+.entry-score-box > .right-score-box  .person  .line{
+   width: 100%;  min-height: 30px; line-height: 30px
+}
+.entry-score-box > .right-score-box  .person  .line > .l-box{
+    width:100px ;   line-height: 20px ;
+}
+.entry-score-box > .right-score-box  .person .line > .l-box  em{
+    display: inline-block; font-size: 12px; color: #999; width: 100%; 
+}
+.entry-score-box > .right-score-box  .person  .line > .r-box{
+    width:660px
+}
+.entry-score-box > .right-score-box  .person  .line > .r-box input{
+     height: 30px;
+}
+.entry-score-box > .right-score-box  .person  .line > .r-box a.acc{
+    color: #666
+}
+#child-list {
+   width: 100%
+}
+#child-list .child{
+    border-bottom:  1px solid #ededed
+}
+#child-list .child .title{
+   width: 100%; height: 40px;
+}
+#child-list .child .title > em{
+    width: 100%; display: inline-block; font-size: 12px; color: #999;
+}
+.pap{
+    color: #999;font-size: 12px; margin-left: 20px;
+}
+.pap i{
+   font-weight: : 200; cursor: pointer; position: relative; left: 5px; font-size: 14px
+}
+#person tr:hover{
+    background:none;
+}
+#person td input{
+     width: 100%; border: 0px; height: 40px; position: relative; text-indent: 10px;
+}
+.bottom-line{
+    width: 100%; height: 50px;  background: #fff; bottom: 0px; left: 0px; box-shadow: 0px -2px 2px #ccc;
+}
+.bottom-btn{
+     width: 1200px;  margin:  0 auto;
+}
+.no-settle{
+     background: #ededed; font-size: 12px; color: #999; padding: 2px 5px; border-radius: 3px;
+}
+.yes-settle{
+   background: #edf8e1; font-size: 12px; color: #70bf4f; padding: 2px 5px; border-radius: 3px;
+}
+.teacher-remark{
+   width: 100%; border-bottom: 1px solid #ededed
+}
+.teacher-remark > .title{
+     width: 100%; height: 40px; line-height: 40px; border:0px; color: #333; font-size: 16px;
+}
+.teacher-remark > .content{
+    font-size: 14px; line-height: 25px;
+}
+.teacher-remark > .annex a{
+   color: #0750f5
+}
+.annex-box{
+    position: relative;
+}
+.annex-box c-pap{
+   position: absolute; width: 200px; background:#dedede; left: -206px; padding: 3px 3px 1px 3px; top: 5px;z-index: 9; display: none;
+}
+.annex-box c-pap span{
+    width: 200px; height: 25px; line-height: 25px; display: inline-block; background: #fff; margin-bottom: 2px
+}
+.annex-box c-pap span a{
+    width: 180px; height: 25px; font-size: 12px; color: #666; line-height: 25px; display: inline-block;  float: left; text-align: left; overflow: hidden;text-overflow:ellipsis;white-space: nowrap;  text-indent: 5px;
+}
+.annex-box c-pap span i{
+    width: 20px;  height: 20px; float: left; margin-top: 5px;  cursor: pointer; color: #666;font-size: 12px;
+}
+/*教师输入评价页面 end*/
+
+@media only screen and (min-width:1600px){
+    .header-box,.index-box,.entry-score-box,.bottom-option-btn > div{
+        width:1600px;
+    }
+    .index-box .left,.index-box .left a{
+       width: 250px
+    }
+
+    .models-list-box,.index-box .right .table-box,.index-box .right,.ass-box .add-box,.ass-box .ass-group, .add-body,.ass-box .ass-group .ass,.index-box .right > .title,.user-add-box,.user-add-box > .title{
+      width:1330px;
+    }
+     .user-add-box .right{
+       width: 900px;
+    }
+    .class-box{
+       width: 1040px;
+    }
+    .course-table-all{
+       width: 1048px;
+    }
+    .table-option-box{
+       width: 1598px;
+    }
+    .right-ass-box,.right-ass-box .info-ass-box{
+       width: 1295px;
+    }
+    .right-ass-box .title,.scoreinfo-box,.child-score-box .child-head,.child-score-box{
+       width: 1255px;
+    }
+    .info-ass-box .content-box .empty-box{
+       width: 1235px;
+    }
+    .group-child .father-box,.child-score-box .child-head span.s1{
+       width: 550px
+    }
+    .group-child .son-box,.child-score-box .child-head span.s2{
+       width: 500px
+    }
+    .entry-score-box > .right-score-box{
+       width: 1360px;
+    }
+    .ass-box .ass-group .ass .left,.teacher-group{
+       width: 1200px;
+    }
+    .ass-box .ass-group .sub{
+      width: 1385px
+    }
+    .ass-box .ass-group .sub > .content{
+      width: 1115px
+    }
+    .group-option-box,.group-option-box .parent-box,.option-text,.step-two-box .conditions{
+      width: 1200px
+    }
+    .group-option-box .parent-box .p-left,.step-two-box .conditions .navbar-right > .list-group{
+       width: 1030px
+    }
+    .group-option-box .child-box{
+       width: 1160px;
+    }
+    .group-option-box .child-box .c-left{
+       width: 1010px;
+    }
+    .step-two-box .conditions .navbar-right{
+       width: 1090px;
+    }
+    .teacher-group .t-right{
+      width: 1000px;
+    }
+}
+
+/***弹出选择节点***/
+
+.layi-cloose-box {
+    width: 650px;
+    height: 600px;
+    position: absolute;
+    background: #FFF;
+    z-index: 100;
+    display: none;
+}
+
+.layi-cloose-box .title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.layi-cloose-box .title i {
+    cursor: pointer;
+}
+
+.layi-cloose-box .all-per {
+    width: 290px;
+    height: 500px;
+    border: 1px solid #e6e6e6;
+    display: inline-block;
+}
+
+.layi-cloose-box .all-per .layi-search-box {
+    position: relative;
+}
+
+.layi-cloose-box .all-per .layi-search-box i {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 20px;
+}
+
+.layi-cloose-box .all-per ul {
+    width: 290px;
+    height: 460px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.layi-cloose-box .all-per ul > li {
+    width: 100%;
+    min-height: 35px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+
+.layi-cloose-box .all-per ul > li > a {
+    line-height: 35px;
+    height: 35px;
+    display: inline-block;
+    width: 100%;
+}
+
+.layi-cloose-box .all-per ul > li > a > i {
+    position: relative;
+}
+
+.layi-cloose-box .all-per ul > li > div {
+    display: none;
+    background: #fcfcfc;
+    width: 100%;
+}
+
+.layi-cloose-box .all-per ul > li > div > span {
+    padding-left: 35px;
+    line-height: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    color: #666
+}
+
+.layi-cloose-box .all-per ul > li > div > span:hover {
+    background: #f5f5f5;
+    color: #333
+}
+
+.layi-cloose-box .cloose-btn {
+    display: inline-block;
+    width: 68px;
+    text-align: center;
+    position: absolute;
+    top: 260px;
+}
+
+.layi-cloose-box .cloose-btn span {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #538de3
+}
+
+.layi-cloose-box .cloose-per {
+    width: 260px;
+    height: 500px;
+    border: 1px solid #e6e6e6;
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.layi-cloose-box .cloose-per span {
+    color: #bdbdbd
+}
+
+.layi-cloose-box .cloose-per ul {
+    width: 100%;
+}
+
+.layi-cloose-box .cloose-per ul > li {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px dashed #e6e6e6;
+    cursor: pointer;
+}
+
+.layi-cloose-box .cloose-per span {
+    width: 100%;
+    display: inline-block;
+    height: 500px;
+    line-height: 500px;
+}
+
+.layi-btn {
+    width: 620px;
+    height: 45px;
+}
+
+.div-input {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.div-input a {
+    padding: 2px 5px;
+    background: #eee;
+    color: #666;
+    font-size: 12px;
+    margin-right: 5px
+}
+
+.div-input a i {
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.div-input span {
+    color: #bdbdbd
+}
+
+/**右侧人员列表 start**/
+.per-box-list {
+    width: 16%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    border-left: 1px solid #e6e6e6;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.per-search-box {
+    width: 95%;
+    margin: 5px 2.5%;
+    position: relative
+}
+
+.per-search-box input {
+    height: 30px;
+    line-height: 30px;
+}
+
+.per-search-box i {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.per-box-list ul > li {
+    width: 100%;
+    min-height: 35px;
+    border-bottom: 1px dashed #e6e6e6;
+    cursor: pointer;
+}
+
+.per-box-list ul > li > a {
+    height: 35px;
+    line-height: 35px;
+    display: -webkit-box;
+    display: box;
+    margin-left: 5px;
+    color: #666
+}
+
+.per-box-list ul > li > a:hover {
+    transition: background-color .3s linear;
+    background: #efefef
+}
+
+.per-box-list ul > li > a > i {
+    font-size: 12px;
+    position: relative;
+    transform: rotate(90deg);
+    left: 3px;
+    top: -3px;
+}
+
+.per-box-list ul > li > .p-list {
+    display: inline-block;
+    width: 100%;
+}
+
+.per-box-list ul > li > .p-list > span {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+}
+
+.per-box-list ul > li > .p-list > span:hover {
+    background: #f5f5f5;
+    color: #333;
+    transition: background-color .3s linear
+}
+
+.per-box-list ul > li > .p-list > span > a {
+    padding-left: 20px;
+    color: #888;
+    font-size: 12px;
+}

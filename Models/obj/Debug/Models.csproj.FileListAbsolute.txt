@@ -1,0 +1,10 @@
+D:\asp.net\workspace\Platform\Models\bin\Debug\Models.dll
+D:\asp.net\workspace\Platform\Models\bin\Debug\Models.pdb
+D:\asp.net\workspace\Platform\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform\Models\obj\Debug\Models.dll
+D:\asp.net\workspace\Platform\Models\obj\Debug\Models.pdb
+D:\asp.net\workspace\Platform_File\Models\bin\Debug\Models.dll
+D:\asp.net\workspace\Platform_File\Models\bin\Debug\Models.pdb
+D:\asp.net\workspace\Platform_File\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform_File\Models\obj\Debug\Models.dll
+D:\asp.net\workspace\Platform_File\Models\obj\Debug\Models.pdb

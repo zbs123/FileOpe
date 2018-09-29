@@ -1,0 +1,14 @@
+D:\asp.net\workspace\Platform\DB\bin\Release\DB.dll
+D:\asp.net\workspace\Platform\DB\bin\Release\DB.pdb
+D:\asp.net\workspace\Platform\DB\bin\Release\MySql.Data.dll
+D:\asp.net\workspace\Platform\DB\obj\Release\DB.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform\DB\obj\Release\DB.dll
+D:\asp.net\workspace\Platform\DB\obj\Release\DB.pdb
+D:\asp.net\workspace\Platform\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+D:\asp.net\workspace\Platform_File\DB\bin\Release\DB.dll
+D:\asp.net\workspace\Platform_File\DB\bin\Release\DB.pdb
+D:\asp.net\workspace\Platform_File\DB\bin\Release\MySql.Data.dll
+D:\asp.net\workspace\Platform_File\DB\obj\Release\DB.csprojResolveAssemblyReference.cache
+D:\asp.net\workspace\Platform_File\DB\obj\Release\DB.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform_File\DB\obj\Release\DB.dll
+D:\asp.net\workspace\Platform_File\DB\obj\Release\DB.pdb

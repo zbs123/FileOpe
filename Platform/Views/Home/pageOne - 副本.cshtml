@@ -1,0 +1,109 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    
+    <link rel="stylesheet" href="../../Content/css/common.css">
+    <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+    <link href="../../Scripts/layui/css/layui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Content/css/page.css">
+    <link rel="stylesheet" href="../../Content/css/iconfont.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="clearfix" style="background: #fff;min-height: 600px;position: relative;">
+        <div class="table-top clearfix">
+            <button class="layui-btn layui-btn-normal" id="upload">
+                <i class="iconfont icon-shangchuan"></i> 上传
+            </button>
+            <button class="layui-btn layui-btn-primary" data-type="createFile">
+                <i class="iconfont icon-jia"></i> 新建文件夹
+            </button>
+            <button class="layui-btn layui-btn-primary">
+                <i class="iconfont icon-xiazai"></i> 下载
+            </button>
+            <button class="layui-btn layui-btn-primary">
+                <i class="iconfont icon-shanchu"></i> 删除
+            </button>
+            <button class="layui-btn layui-btn-primary">
+                <i class="iconfont icon-pencil"></i> 重命名
+            </button>
+            <button class="layui-btn layui-btn-normal" id="shareBtn" style="display: none;">
+                <i class="iconfont icon-fenxiang2"></i> 分享
+            </button>
+            <i class="iconfont icon-paixujiang fr" id="menue"></i>
+            <div class="searchBox fr">
+                <input type="text" id="search" required lay-verify="required" placeholder="输入关键词搜索" class="layui-input">
+                <i class="iconfont icon-fangdajing"></i>
+            </div>
+            <div class="menueBox">
+                <ul class="menueList">
+                    <li data-type="sortName" style="color: #1E9FFF;">
+                        <i class="layui-icon" style="display: block;">&#xe605;</i>文件
+                    </li>
+                    <li data-type="sortSize"><i class="layui-icon">&#xe605;</i>大小</li>
+                    <li data-type="sortDate"><i class="layui-icon">&#xe605;</i>修改日期</li>
+                </ul>
+            </div>
+        </div>
+        <div class="reminds">
+            <span class="layui-breadcrumb fl" id="breadcrumb">
+                <a href="">全部文件</a>
+                <a><cite>文档</cite></a>
+            </span>
+        已全部加载，共<span>@ViewBag.filecount</span>个</div>
+
+        <input type="hidden" id="filepath" value="@ViewBag.filepath"/>
+        <input type="hidden" id="type" value="" />
+        
+
+        <table class="layui-hide" id="test" lay-filter="tableTest"></table>
+        <div class="noData layui-hide" id="noData">
+            <img src="/images/noData.png" alt="">
+            <p>您还没有上传过文件，点击<span style="color: #1E9FFF;cursor: pointer;">上传</span>按钮～</p>
+        </div>
+    </div>
+    <script type="text/html" id="fileName">
+        {{#  if(d.Type === '1'){ }}
+        <span><img src="/images/wenjianjia.png" alt="">{{ d.Name }}</span>
+        @*{{#  } else if(d.Type === '0') { }}
+        <span><img src="/images/doc.png" alt="">{{ d.Name }}</span>*@
+        {{#  } else { }}
+        <span><img src="/images/{{ d.Type }}.png" alt="">{{ d.Name }}</span>
+        {{#  } }}
+        {{#  if(d.name === 'new') { }}
+        <span class="newCreatebox">
+            <img src="images/wenjianjia.png" alt="">
+            <input type="text" value="新建文件夹" class="newFile">
+            <button class="layui-btn layui-btn-primary" lay-event="yes">
+                <i class="layui-icon" style=" color: #1E9FFF;">&#xe605;</i>
+            </button>
+            <button class="layui-btn layui-btn-primary" lay-event="no">
+                <i class="layui-icon" style="color: #1E9FFF;">&#x1006;</i>
+            </button>
+        </span>
+       
+        {{#  } }}
+    </script>
+    <script src="../../Scripts/js/jquery.min.js"></script>
+    <script src="../../Scripts/layui/layui.all.js"></script>
+    <script src="../../Scripts/js/pageOne.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Head.cshtml";
+    @Styles.Render("~/Content/css/page.css")
+}
+<style>
+    .layui-table th,.layui-table td{
+        text-align:left;
+    }
+</style>
+<body class="body">
+    <div class="layui-form" action="">
+        @Html.Partial("~/Views/Shared/Top.cshtml")
+        <div class="index-box" style="padding-top:80px;">
+            @Html.Partial("~/Views/Shared/RoleLeft.cshtml", ViewData["page"] = "StudentList")
+            <div class="right f-l ml-20">
+                <div class="title">
+                    <div class="t-l">文档管理</div>
+                </div>
+                <div class="table-box" style="margin-bottom:80px;">
+                    @*<o class="text f-l pl-10">
+                            共有<span id="countdata">--</span>条数据
+                        </o>
+                        <o class="option f-r">
+                            <btn class="mr-10">
+                                <a class="current" href="../Student?sguid=@ViewBag.Sguid">添加学生</a>
+                                <a class="mr-5" id="more-option" data-is="0">
+                                    批量操作 <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li data-com="disable">批量禁用</li>
+                                        <li data-com="delete">批量删除</li>
+                                    </ul>
+                                </a>
+                                <a id="import">导入数据</a>
+                                <a id="export">导出数据</a>
+                            </btn>
+                        </o>*@
+                    <div class="clearfix" style="background: #fff;height: 100%;position: relative;overflow-x: hidden;">
+                        <div class="table-top clearfix" style="text-align:right;">
+                            <div class="btnsWrap" style="float:left;font-size: 16px;color: #666;">
+                                共<span id="filecount"></span>条数据
+                            </div>
+                            <button class="layui-btn layui-btn-primary" id="empty">
+                                 清空回收站
+                            </button>
+                            <button class="layui-btn layui-btn-primary" id="reduction">
+                                 还原
+                            </button>
+                        </div>
+                        @*<div class="reminds">已全部加载，共<span id="filecount"></span>个</div>*@
+                        <table class="layui-hide" id="test" lay-filter="tableTest"></table>
+                        <div class="noData layui-hide" id="noData">
+                            <img src="../images/noData.png" alt="">
+                            <p>没有文件～</p>
+                        </div>
+                    </div>
+                    
+                    <div class="table  pb-20">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+</body>
+
+<!--文件图标添加-->
+<script type="text/html" id="fileName">
+    {{#  if(d.Type === '1'){ }}
+    <span><img src="../images/wenjianjia.png" alt="">{{ d.Name }}</span>
+    {{#  } else { }}
+    <span><img src="../images/{{d.Type}}.png" alt="">{{ d.Name }}</span>
+    {{# } }}
+</script>
+@Scripts.Render("~/Scripts/js/jquery.min.js", "~/Scripts/layui/layui.all.js", "~/Scripts/js/recovery.js")
+@*<script src="../Scripts/js/jquery.min.js"></script>
+    <script src="../Scripts/layui/layui.all.js"></script>
+    <script src="../Scripts/js/recovery.js"></script>*@
+
+
+

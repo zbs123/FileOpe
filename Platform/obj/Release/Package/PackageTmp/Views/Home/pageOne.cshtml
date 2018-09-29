@@ -1,0 +1,561 @@
+﻿@using Models;
+@{
+    Layout = "~/Views/Shared/_Head.cshtml";
+    @Styles.Render("~/Content/css/page.css", "~/webuploader/webuploader.css", "~/Content/app.css");
+    @Scripts.Render("~/Scripts/upload/jquery-1.7.1.min.js", "~/webuploader/webuploader.js", "~/Scripts/upload/Kings.Uploader.js");
+}
+
+<style type="text/css">
+    #viewck div {
+        width: 20px;
+        height: 20px;
+        float: left;
+        background-color: #cccccc;
+        border: 1px solid #ffffff;
+    }
+
+    #viewck div.has {
+        background-color: green;
+        text-align: center;
+    }
+
+    #picker .webuploader-pick {
+        height: 20px;
+        width: 30px;
+        padding: 6px 12px;
+        display: block;
+        background: #1E9FFF;
+    }
+
+    #picker {
+        font-size: 14px;
+        display: inline-block;
+        line-height: 1.428571429;
+        vertical-align: middle;
+        margin: 0 12px 0 0;
+        padding: 4px 10px;
+        margin-right: -6px;
+    }
+
+    .webuploader-pick-hover {
+        /*background: #C9C9C9;
+           color: #C9C9C9;*/
+        background-color: #C9C9C9;
+    }
+
+    .layui-table td:nth-child(2), .layui-table th:nth-child(2) {
+        text-align: left;
+    }
+    /*部门人员*/
+    #person {
+        background: #3c4252;
+    }
+
+    #shareBox {
+        border: none;
+        margin-top: 10px;
+        display: none;
+    }
+
+    #shareBox .layui-colla-title {
+        height: 40px;
+        line-height: 40px;
+        background-color: #e4e4e4;
+        text-indent: 20px;
+        padding: 0;
+        font-size: 14px;
+        color: #4c4c4c;
+    }
+
+    #shareBox .layui-colla-title > i {
+        right: 15px;
+        color: #A7A7A7;
+    }
+
+    #shareBox .layui-colla-content > ul > li {
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        text-indent: 30px;
+        font-size: 14px;
+        color: #4c4c4c;
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px dashed #e6e6e6;
+    }
+
+    #shareBox .layui-colla-content > ul > li.active, #shareBox .layui-colla-content > ul > li:hover {
+        color: #1e9fff;
+        background: #eef5fe;
+    }
+
+    #shareBox .layui-colla-content > ul > li > i {
+        position: absolute;
+        right: 13px;
+        top: 1px;
+        color: #1e9fff;
+        display: none;
+    }
+
+    #shareBox .searchBox {
+        width: 50%;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #f1f2f4;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        left: 10px;
+        margin: 35px auto 10px;
+    }
+
+    #shareBox .searchBox > input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding-left: 0px;
+        color: #999999;
+        text-indent: 18px;
+        font-size: 14px;
+        background: #f3f3f3;
+    }
+
+    #shareBox .searchBox > i {
+        position: absolute;
+        top: 17px;
+        right: 6px;
+        color: #979797;
+        font-size: 23px;
+        color: #333333;
+        line-height: 0;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .layui-table-view {
+        margin: 0px;
+    }
+</style>
+
+
+
+
+@*<div class="content-pannel-buttons" style="border-bottom:1px solid #cccccc">
+        @*<a onclick="" id="picker"><b class="p-icon-upload">选择文件</b></a>
+        <button onclick="start()"><b class="p-icon-add">开始</b></button>
+        <button onclick="stop()"><b class="p-icon-edit">暂停</b></button>
+    </div>
+    <div id="filesss" class="file">
+    </div>
+    <div id="thelist"></div>
+    <div id="viewck" style="padding:15px;">
+    </div>*@
+
+<body class="body">
+    <div class="layui-form" action="">
+        @Html.Partial("~/Views/Shared/Top.cshtml")
+        <div class="index-box" style="padding-top:80px;">
+            @Html.Partial("~/Views/Shared/RoleLeft.cshtml", ViewData["page"] = "StudentList")
+            <div class="right f-l ml-20">
+                <div class="title">
+                    <div class="t-l">文档管理</div>
+                </div>
+                <div class="table-box" style="margin-bottom:80px;">
+                    @*<o class="text f-l pl-10">
+                            共有<span id="countdata">--</span>条数据
+                        </o>
+                        <o class="option f-r">
+                            <btn class="mr-10">
+                                <a class="current" href="../Student?sguid=@ViewBag.Sguid">添加学生</a>
+                                <a class="mr-5" id="more-option" data-is="0">
+                                    批量操作 <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li data-com="disable">批量禁用</li>
+                                        <li data-com="delete">批量删除</li>
+                                    </ul>
+                                </a>
+                                <a id="import">导入数据</a>
+                                <a id="export">导出数据</a>
+                            </btn>
+                        </o>*@
+
+                    <div class="clearfix">
+
+                        <div class="table-top clearfix">
+                            <div class="btnsWrap" style="float:left;font-size: 16px;color: #666;">
+                                共<span id="listcount">@ViewBag.filecount</span>条数据
+                            </div>
+                            <div class="fl btnsWrap" style="float:right;">
+                                <a onclick="" id="picker">上传</a>
+                                <button class="layui-btn layui-btn-primary cf" data-type="createFile">
+                                    新建文件夹
+                                </button>
+                                @*<button class="layui-btn layui-btn-primary down">
+                                         下载
+                                    </button>
+                                    <button class="layui-btn layui-btn-primary delete">
+                                         删除
+                                    </button>
+                                    <button class="layui-btn layui-btn-primary rename" data-type="resetName">
+                                         重命名
+                                    </button>*@
+                                <div class="layui-btn-group btngroup layui-hide" style="margin-left:10px;">
+                                    <button class="layui-btn layui-btn-primary addVotePeople">
+                                        分享
+                                    </button>
+                                    <button class="layui-btn layui-btn-primary down">
+                                        下载
+                                    </button>
+                                    <button class="layui-btn layui-btn-primary delete">
+                                        删除
+                                    </button>
+                                    <button class="layui-btn layui-btn-primary rename" data-type="resetName">
+                                        重命名
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reminds">
+                            <span class="layui-breadcrumb" id="breadcrumb" style="float:left;">
+                                <a href="pageOne">全部文件</a>
+                                @foreach (var p in ViewBag.remindPath)
+                                {
+                                    <a href="pageOne?path=@p.Address">@p.Name</a>
+                                }
+                            </span>
+                            &nbsp;
+                            @*已全部加载，共<span id="listcount">@ViewBag.filecount</span>个*@
+                        </div>
+                        <input type="hidden" id="filepath" value="@ViewBag.filepath" />
+                        <input type="hidden" id="type" value="@ViewBag.type" />
+                        <div class="table  pb-20 f-l">
+                            <div class="grade-box f-l ml-15">
+                                <a href="javascript:void(0);" class="export-save layui-hide"><span id="sp"></span></a>
+                                <ul id="typelist">
+                                    <li data-guid="0" data-name=""><i class="fa fa-caret-right"></i><font> 图片</font>  <span><b data-com="edit">编辑</b><b class="delete" data-com="delete">删除</b></span></li>
+                                    <li data-guid="1" data-name=""><i class="fa fa-caret-right"></i><font> 文档</font>  <span><b data-com="edit">编辑</b><b class="delete" data-com="delete">删除</b></span></li>
+                                    <li data-guid="2" data-name=""><i class="fa fa-caret-right"></i><font> 其他</font>  <span><b data-com="edit">编辑</b><b class="delete" data-com="delete">删除</b></span></li>
+
+                                </ul>
+                                <div class="add-grade ml-10 mt-10 hide">
+                                    <input type="text" class="layui-input" id="grade-add-input" placeholder="请输入年级名称" maxlength="7" />
+                                    <a title="确定" data-com="save">√</a>
+                                    <a title="取消" data-com="cancel">×</a>
+                                </div>
+                            </div>
+                            <div class="class-box f-l ml-10">
+                                <div class="layui-hide" id="test" lay-filter="tableTest"></div>
+                                <div id="demo2"></div>
+                            </div>
+                        </div>
+
+                        <div class="noData layui-hide" id="noData">
+                            <img src="/fileos/images/noData.png" alt="">
+                            <p>您还没有上传过文件，点击<span style="color: #1E9FFF;cursor: pointer;">上传</span>按钮～</p>
+                        </div>
+
+                    </div>
+
+                    <!--上传弹出层-->
+                    <div id="uploadBox">
+                        <div class="warn">
+                            <span>有1个文件上传成功</span>
+                            <span class="fr">
+                                <img src="images/warn.png" alt="" class="warnIcon fl">
+                                <i class="fl" style="margin-right: 8px;">警告</i>
+                                <i class="layui-icon closeWarn">&#x1006;</i>
+                            </span>
+                            <span class="tips">
+                                严禁利用百度网盘上传、传播暴力恐怖、色情违法及其他违法信息，一经发现将严格按照相关法律法规处理。
+                                <em></em>
+                            </span>
+                        </div>
+                        <ul></ul>
+                    </div>
+
+                    @*分享弹出框*@
+                    <section class="layi-cloose-box radius" id="shareBox" style="display: none;">
+                        <div class="title"><span class="pl-20">选择用户</span><span class="f-r pr-20"><i class="layui-icon close_cloose" title="关闭">&#x1006;</i></span></div>
+                        <div class="all-per ml-10 mt-10">
+                            @*<div class="layui-form">
+                                    <div class="layui-input-block" style="margin-left:0px !important;">
+                                        <select name="interest" id="userType" lay-filter="user_type">
+                                            <option value="0" selected="">按部门</option>
+                                            <option value="1">按年级</option>
+                                            <option value="2">按班级</option>
+
+                                        </select>
+                                    </div>
+                                </div>*@
+                            <div class="layi-search-box">
+                                <input class="layui-input input-bd-1 pl-30" type="text" id="keyword" placeholder="输入用户姓名" />
+                                <i class="layui-icon">&#xe615;</i>
+                            </div>
+                            <ul id="personlist">
+                                @{ foreach (var item in ViewData["list"] as List<Role_User>)
+                                    {
+                                        <li>
+                                            <a><i class="fa  fa-caret-right pl-5"></i> <span class="pl-5">@item.RoleName</span></a><div>
+                                                @{ if (item.Users != null)
+                                                    {
+                                                        string uid = Request.Cookies["User"]["uguid"];
+
+                                                        foreach (var i in item.Users)
+                                                        {
+                                                            if (uid != i.Uid)
+                                                            {
+
+                                                                <span data-c="0" data-uid="@i.Uid" data-name="@i.Name">@i.Name</span>
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </li>
+                                                    }}
+
+
+                            </ul>
+                        </div>
+                        <div class="cloose-per f-r mt-10 mr-10" id="wrap">
+                            <ul></ul>
+                        </div>
+                        <div class="layi-btn text-r">
+                            <a class="layui-btn layui-btn-sm layui-btn-primary mt-10 close_cloose">取消</a>
+                            <a class="layui-btn layui-btn-sm layui-btn-normal mt-10" id="lay-confirm">确定</a>
+                        </div>
+                    </section>
+                    @*<div class="layui-collapse" id="shareBox" style="display: none;">
+                            <div style="margin: 35px auto 10px;left: 10px;height: 32px;">
+                                <div class="searchBox" style="width:63%;float:left;margin:0;margin-right:20px;">
+                                    <input type="text" required lay-verify="required" placeholder="输入关键词搜索" class="layui-input">
+
+                                    <i class="layui-icon" id="search">&#xe615;</i>
+                                    <a class="close">X</a>
+
+
+                                </div>
+                                <div style="width:20%;float:left;">
+                                    <button class="layui-btn layui-btn-normal" id="shareBtn" style="border-radius: 5px;line-height:34px;height:34px;">
+                                        <i class="iconfont icon-fenxiang2"></i> 分享
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            @{ foreach (var item in ViewData["list"] as List<Role_User>)
+                                {
+                                    <div class="layui-colla-item" data-name="">
+                                        <h2 class="layui-colla-title">@item.RoleName</h2>
+                                        <div class="layui-colla-content">
+                                            <ul>
+                                                @{ if (item.Users != null)
+                                                    {
+                                                        string uid = Request.Cookies["User"]["uguid"];
+
+                                                        foreach (var i in item.Users)
+                                                        {
+                                                            if (uid != i.Uid)
+                                                            {
+                                                                <li>
+                                                                    <i class="layui-icon">&#xe605;</i>
+                                                                    <span data-userid="@i.Uid">@i.Name</span>
+                                                                </li>
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                                    }}
+
+                        </div>*@
+                    <div class="table  pb-20">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--搜索 start-->
+    <div class="right-search show-btn"><i class="fa fa-search mt-10"></i></div>
+    <div class="seach-right-box">
+        <div class="title" id="close-box"><i class="fa fa-window-close-o"></i> 数据筛选</div>
+        <div class="seacher-body ml-10 layui-form">
+            <div class="s-block mb-10">
+                <span>文件名</span>
+                <input type="text" class="s-input" placeholder="输入关键词搜索" id="r-search-name" />
+            </div>
+            <div class="s-block mb-10">
+                <span>日期</span>
+                <input type="text" class="s-input" id="r-search-date" placeholder="选择日期范围">
+                <input type="hidden" id="start" />
+                <input type="hidden" id="end" />
+                @*<input type="text" class="s-input" placeholder="输入关键词搜索" id="r-search" />*@
+            </div>
+            <div class="s-block mb-10">
+                <span>类型</span>
+                <input type="text" class="s-input" placeholder="输入文件后缀搜索" id="r-search-type" />
+            </div>
+
+            <div class="s-btn-list">
+                <a class="clean-btn" id="clean-btn">清除</a>
+                <a class="layui-btn layui-btn-sm layui-btn-normal" id="seacher-btn">&nbsp;&nbsp;搜索&nbsp;&nbsp;</a>
+            </div>
+
+        </div>
+    </div>
+    <!--搜索 end-->
+    @*<div class="right-search share-btn" style="top:700px;left:0px;"><i class="layui-icon" style="font-size:36px;">&#xe641;</i></div>*@
+</body>
+
+<!--文件图标添加-->
+<script type="text/html" id="fileName">
+    {{#  if(d.Type === '1'){ }}
+    <span data-fileurl="{{ d.FileUrl }}" data-type="{{ d.Type }}"><img src="/fileos/images/wenjianjia.png" alt="">{{ d.Name }}</span>
+    <span class="toolBar fr"><i class="layui-icon">&#xe65f;</i></span>
+    <ul class="toolList">
+        <li class="down">下载</li>
+        <li class="delete">删除</li>
+    </ul>
+    {{#  } else if(d.Name === 'new') { }}
+    <span class="newCreatebox">
+        <img src="/fileos/images/wenjianjia.png" alt="">
+        <input type="text" value="新建文件夹" class="newFile">
+        <button class="layui-btn layui-btn-primary" lay-event="yes">
+            <i class="layui-icon" style=" color: #1E9FFF;">&#xe605;</i>
+        </button>
+        <button class="layui-btn layui-btn-primary" lay-event="no">
+            <i class="layui-icon" style="color: #1E9FFF;">&#x1006;</i>
+        </button>
+    </span>
+    {{#  } else { }}
+    <span data-fileurl="{{ d.FileUrl }}" data-type="{{ d.Type }}"><img src="../images/{{ d.Type }}.png" alt="">{{ d.Name }}</span>
+    <span class="toolBar fr"><i class="layui-icon">&#xe65f;</i></span>
+    <ul class="toolList">
+        <li class="down">下载</li>
+        <li class="delete">删除</li>
+    </ul>
+    {{#  } }}
+</script>
+@Scripts.Render("~/Scripts/js/jquery.min.js", "~/Scripts/layui/layui.all.js", "~/Scripts/js/pageOne.js")
+
+<script>
+
+        var uploader = new Kings.Uploader().createFile({
+            swf: '@Url.Content("~/webuploader/Uploader.swf")',
+            server: '@Url.Content("UploaderProcess")',
+            pick: '#picker',
+            resize: false,
+            fileSingleSizeLimit: 104857600,
+
+        }, {
+        beforeFileQueued: function (file) {
+
+            var allext = '.png,.xls,.xlsx,.doc,.docx,.ppt,.pptx,.pdf,.txt,.zip,.wps,.dps,.et,.jpg,.bmp,.rar';
+            if (allext.indexOf(file.ext.toLowerCase()) == -1) {
+                layer.msg("上传的文件包含非法文件，将自动过滤！！！");
+            }
+        },
+        fileQueued: function (file) {
+            file = file[0] || file;
+            $("#uploadBox").find("ul").append('<li id="' + file.id + '"><span class="file-name"><img src="images/doc.png" alt="">' + file.name + '</span><span class="file-size">' + WebUploader.formatSize(file.size, 0, ['B', 'KB', 'MB']) + '</span><span class="file-path">' + $("#breadcrumb").find("a:last-child").text() + '</span><span class="file-status">等待上传...</span></li>');
+            layer.open({
+                type: 1,
+                title: '上传完成',
+                skin: 'layui-layer-shadow',
+                offset: ['519px', $(document).width() - 635+'px'],
+                shade: 0,
+                maxmin: true,
+                area: ['635px', '430px'], //宽高
+                content: $("#uploadBox"),
+                cancel: function (index, layero) {
+                    $("#uploadBox").find("ul").each(function (item, index) {
+                        if ($(this).find("span:last-child").text().indexOf("%") != -1 && $(this).find("span:last-child").text() != "100%") {
+                            $(this).remove();
+                        }
+
+                    })
+                    uploader.reset();
+                    layer.close(index);
+                    $("#uploadBox").hide();
+                    return false;
+                }
+            });
+
+
+        },
+        uploadStart: function (file) {
+
+        },
+        uploadProgress: function (file, number) {
+            var $li = $('#' + file.id);
+
+            if ((number * 100).toFixed(2) == 100.00)
+            {
+
+                $li.find("span:last-child").html('<i class="layui-icon" style="color: #5CD992;">&#xe616;</i>');
+            }
+            else
+            {
+                $li.find("span:last-child").text((number * 100).toFixed(0)+"%");
+            }
+        },
+        uploadFinished: function (file) {
+            var table = layui.table;
+            table.reload('test', {
+                url: "getfile",
+                limit:50,
+                where: {
+                    path: $("#filepath").val()
+                },
+                done: function (res) {
+                     jQuery("#listcount").text("");
+                     jQuery("#listcount").text(res.count);
+                      if (res.count == 0) {
+                        jQuery("#noData").removeClass("layui-hide");
+                          jQuery(".layui-none").remove();
+                        jQuery(".layui-table-page").remove();
+                    } else {
+
+                        jQuery("#noData").addClass("layui-hide");
+                    }
+
+                }
+            });
+
+        },
+        uploadSuccess: function (file) {
+
+        },
+        //文件上传暂停事件
+        stopUpload: function () {
+
+        },
+        error: function (type) {
+            if (type == "F_EXCEED_SIZE") {
+                layer.msg("文件大小不能超过100M");
+            }
+        }
+     });
+
+    function start() {
+        uploader.upload();
+    }
+    function stop() {
+        uploader.stop(true);
+    }
+
+
+</script>
+
+
+
+

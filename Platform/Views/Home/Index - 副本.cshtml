@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+   
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="../../Content/css/common.css">
+    <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+    <link href="../../Scripts/layui/css/layui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Content/css/index.css">
+    <link rel="stylesheet" href="../../Content/css/iconfont.css">
+
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contentBox">
+            <div class="leftBox">
+                <input type="hidden" id="type" value="@ViewBag.type" />
+                <div class="left-user"></div>
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;"><i class="iconfont icon-wenjianjia"></i>全部文件</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" type="2"><i class="iconfont icon-wendang"></i>文档</a></dd>
+                            <dd><a href="javascript:;" type="1"><i class="iconfont icon-picture_icon"></i>图片</a></dd>
+                            <dd><a href="javascript:;" type="0"><i class="iconfont icon-qitafuwu"></i>其他</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href=""><i class="iconfont icon-fenxiang2"></i>分享</a></li>
+                    <li class="layui-nav-item"><a href=""><i class="iconfont icon-lajixiang"></i>回收站</a></li>
+                </ul>
+            </div>
+            <div class="rightBox">
+                <iframe src="/Home/pageOne" frameborder="0" id="rightBox"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../Scripts/js/jquery.min.js"></script>
+    <script src="../../Scripts/layui/layui.all.js"></script>
+    <script src="../../Scripts/js/index.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

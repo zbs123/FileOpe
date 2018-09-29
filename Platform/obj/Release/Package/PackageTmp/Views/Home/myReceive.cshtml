@@ -1,0 +1,106 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="../Content/css/common.css">
+    <link rel="stylesheet" href="../Content/css/font-awesome.min.css">
+    <link href="../Scripts/layui/css/layui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Content/css/page.css">
+    <link rel="stylesheet" href="../Content/css/iconfont.css">
+
+
+    <script type="text/javascript" src="~/Scripts/upload/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/webuploader/webuploader.js")"></script>
+    <link href="@Url.Content("~/webuploader/webuploader.css")" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/upload/Kings.Uploader.js"></script>
+    <style type="text/css">
+        #viewck div {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: #cccccc;
+            border: 1px solid #ffffff;
+        }
+
+            #viewck div.has {
+                background-color: green;
+                text-align: center;
+            }
+    </style>
+    <style>
+    </style>
+</head>
+
+<body>
+    @*<div class="content-pannel-buttons" style="border-bottom:1px solid #cccccc">
+            @*<a onclick="" id="picker"><b class="p-icon-upload">选择文件</b></a>
+            <button onclick="start()"><b class="p-icon-add">开始</b></button>
+            <button onclick="stop()"><b class="p-icon-edit">暂停</b></button>
+        </div>
+        <div id="filesss" class="file">
+        </div>
+        <div id="thelist"></div>
+        <div id="viewck" style="padding:15px;">
+        </div>*@
+
+
+    <div class="clearfix" style="background: #fff;height: 100%;position: relative;">
+        <div class="table-top clearfix">
+
+            <div class="fl btnsWrap">
+                
+                <button class="layui-btn layui-btn-primary" id="delete">
+                    <i class="iconfont icon-shanchu"></i> 删除
+                </button>
+                <input type="hidden" id="shareid" />
+            </div>
+        </div>
+        <div class="reminds">
+            <span class="layui-breadcrumb fl" id="breadcrumb">
+                <a href="myshare">全部文件</a>
+                @*@foreach (var p in ViewBag.remindPath)
+                {
+                    <a href="pageOne?path=@p.Address">@p.Name</a>
+                }*@
+            </span>
+            已全部加载，共<span>@ViewBag.filecount</span>个
+        </div>
+        <input type="hidden" id="filepath" value="@ViewBag.filepath" />
+
+        <table class="layui-hide" id="test" lay-filter="tableTest"></table>
+        <div class="noData" id="noData">
+            <img src="../images/noData.png" alt="">
+            <p>您还没有上传过文件，点击<span style="color: #1E9FFF;cursor: pointer;">上传</span>按钮～</p>
+        </div>
+
+    </div>
+    <!--文件图标添加-->
+    <script type="text/html" id="fileName">
+
+        {{#  if(d.Type === '1'){ }}
+        <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/wenjianjia.png" alt="">{{ d.Name }}</span>
+        {{#  } else if(d.Type === '3') { }}
+        <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/wenjianjia.png" alt="">{{ d.Name }}</span>
+        {{#  } else { }}
+        <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/{{ d.Type }}.png" alt="">{{ d.Name }}</span>
+        {{#  } }}
+    </script>
+    <script src="../Scripts/js/jquery.min.js"></script>
+    <script src="../Scripts/layui/layui.all.js"></script>
+    <script src="../Scripts/js/myShare.js"></script>
+    
+</body>
+
+
+</html>

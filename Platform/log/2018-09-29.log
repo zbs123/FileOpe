@@ -1,0 +1,15 @@
+--------------------   时间：2018-09-29 09:53:35   --------------------
+System.Exception: 未能找到路径“D:\asp.net\workspace\Platform_File\Platform\Platform\2013年高二物理创新思路课件：4-3《电磁波谱》（教科版选修1-1）.ppt”的一部分。
+   在 Platform.Commonn.DoAspose.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\DoAspose.cs:行号 318
+   在 Platform.Controllers.HomeController.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\HomeController.cs:行号 616
+
+--------------------   时间：2018-09-29 09:53:37   --------------------
+System.Exception: 未能找到路径“D:\asp.net\workspace\Platform_File\Platform\Platform\key.txt”的一部分。
+   在 Platform.Commonn.DoAspose.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\DoAspose.cs:行号 318
+   在 Platform.Controllers.HomeController.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\HomeController.cs:行号 616
+
+--------------------   时间：2018-09-29 10:38:45   --------------------
+System.Exception: 未能找到路径“D:\asp.net\workspace\Platform_File\Platform\Platform\key.txt”的一部分。
+   在 Platform.Commonn.DoAspose.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\DoAspose.cs:行号 318
+   在 Platform.Controllers.HomeController.GetAsposeOfficeFiles(String filePath, Int32 pageIndex) 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\HomeController.cs:行号 616
+

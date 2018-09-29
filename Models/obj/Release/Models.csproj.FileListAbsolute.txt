@@ -1,0 +1,12 @@
+D:\asp.net\workspace\Platform\Models\bin\Release\Models.dll
+D:\asp.net\workspace\Platform\Models\bin\Release\Models.pdb
+D:\asp.net\workspace\Platform\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform\Models\obj\Release\Models.dll
+D:\asp.net\workspace\Platform\Models\obj\Release\Models.pdb
+D:\asp.net\workspace\Platform\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+D:\asp.net\workspace\Platform_File\Models\bin\Release\Models.dll
+D:\asp.net\workspace\Platform_File\Models\bin\Release\Models.pdb
+D:\asp.net\workspace\Platform_File\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+D:\asp.net\workspace\Platform_File\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform_File\Models\obj\Release\Models.dll
+D:\asp.net\workspace\Platform_File\Models\obj\Release\Models.pdb

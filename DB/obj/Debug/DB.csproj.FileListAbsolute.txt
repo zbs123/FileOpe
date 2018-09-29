@@ -1,0 +1,12 @@
+D:\asp.net\workspace\Platform\DB\bin\Debug\DB.dll
+D:\asp.net\workspace\Platform\DB\bin\Debug\DB.pdb
+D:\asp.net\workspace\Platform\DB\bin\Debug\MySql.Data.dll
+D:\asp.net\workspace\Platform\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform\DB\obj\Debug\DB.dll
+D:\asp.net\workspace\Platform\DB\obj\Debug\DB.pdb
+D:\asp.net\workspace\Platform_File\DB\bin\Debug\DB.dll
+D:\asp.net\workspace\Platform_File\DB\bin\Debug\DB.pdb
+D:\asp.net\workspace\Platform_File\DB\bin\Debug\MySql.Data.dll
+D:\asp.net\workspace\Platform_File\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform_File\DB\obj\Debug\DB.dll
+D:\asp.net\workspace\Platform_File\DB\obj\Debug\DB.pdb

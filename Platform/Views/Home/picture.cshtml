@@ -1,0 +1,303 @@
+﻿@using Models
+@{
+    Layout = "~/Views/Shared/_Head.cshtml";
+    @Styles.Render("~/Content/css/page.css");
+}
+
+
+
+<style>
+    .layui-layer-setwin .layui-layer-close2 {
+        top: 0px !important;
+        right: 0px !important;
+    }
+
+    .site-demo-flow {
+        /*overflow: auto;*/
+    }
+
+    .layui-layer-photos {
+        top: 0px !important;
+    }
+
+    .btnsWrap {
+        float: left;
+    }
+
+    #picker .webuploader-pick {
+        height: 20px;
+        width: 60px;
+        padding: 6px 12px;
+        display: block;
+        background: #1E9FFF;
+    }
+
+    #picker {
+        font-size: 14px;
+        display: inline-block;
+        line-height: 1.428571429;
+        vertical-align: middle;
+        margin: 0 12px 0 0;
+        padding: 4px 10px;
+        margin-right: -6px;
+    }
+
+    .webuploader-pick-hover {
+        /*background: #C9C9C9;
+           color: #C9C9C9;*/
+        background-color: #C9C9C9;
+    }
+
+    .layui-table td:nth-child(2), .layui-table th:nth-child(2) {
+        text-align: left;
+    }
+    /*部门人员*/
+    #person {
+        background: #3c4252;
+    }
+
+    #shareBox {
+        border: none;
+        margin-top: 10px;
+        display: none;
+    }
+
+    #shareBox .layui-colla-title {
+        height: 40px;
+        line-height: 40px;
+        background-color: #e4e4e4;
+        text-indent: 20px;
+        padding: 0;
+        font-size: 14px;
+        color: #4c4c4c;
+    }
+
+    #shareBox .layui-colla-title > i {
+        right: 15px;
+        color: #A7A7A7;
+    }
+
+    #shareBox .layui-colla-content > ul > li {
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        text-indent: 30px;
+        font-size: 14px;
+        color: #4c4c4c;
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px dashed #e6e6e6;
+    }
+
+    #shareBox .layui-colla-content > ul > li.active, #shareBox .layui-colla-content > ul > li:hover {
+        color: #1e9fff;
+        background: #eef5fe;
+    }
+
+    #shareBox .layui-colla-content > ul > li > i {
+        position: absolute;
+        right: 13px;
+        top: 1px;
+        color: #1e9fff;
+        display: none;
+    }
+
+    #shareBox .searchBox {
+        width: 50%;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #f1f2f4;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        left: 10px;
+        margin: 35px auto 10px;
+    }
+
+    #shareBox .searchBox > input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding-left: 0px;
+        color: #999999;
+        text-indent: 18px;
+        font-size: 14px;
+        background: #f3f3f3;
+    }
+
+    #shareBox .searchBox > i {
+        position: absolute;
+        top: 17px;
+        right: 6px;
+        color: #979797;
+        font-size: 23px;
+        color: #333333;
+        line-height: 0;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+<body class="body">
+    <div class="layui-form" action="">
+        @Html.Partial("~/Views/Shared/Top.cshtml")
+        <div class="index-box" style="padding-top:80px;">
+            @Html.Partial("~/Views/Shared/Roleleft.cshtml", ViewData["page"] = "StudentList")
+            <div class="right f-l ml-20">
+                <div class="title">
+                    <div class="t-l">文档管理</div>
+                </div>
+                <div class="table-box" style="margin-bottom:80px;">
+                    @*<o class="text f-l pl-10">
+                            共有<span id="countdata">--</span>条数据
+                        </o>
+                        <o class="option f-r">
+                            <btn class="mr-10">
+                                <a class="current" href="../Student?sguid=@ViewBag.Sguid">添加学生</a>
+                                <a class="mr-5" id="more-option" data-is="0">
+                                    批量操作 <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li data-com="disable">批量禁用</li>
+                                        <li data-com="delete">批量删除</li>
+                                    </ul>
+                                </a>
+                                <a id="import">导入数据</a>
+                                <a id="export">导出数据</a>
+                            </btn>
+                        </o>*@
+                    <div class="layui-form" id="lay_photos" style="background: #fff;padding-bottom: 10px;">
+                        <div class="table-top clearfix" style="height:62px;line-height:37px;">
+                            @*<button class="layui-btn layui-btn-normal btnsWrap" style="background:none;color:blue;">
+                                时光轴
+                            </button>*@
+                            <a style="color:#4ea9f1;cursor:default;height:62px;">时光轴</a>
+                            <div class="layui-btn-group btngroup layui-hide" style="margin-left:10px;">
+                                <button class="layui-btn layui-btn-primary btnsWrap down">
+                                    下载
+                                </button>
+                                <button class="layui-btn layui-btn-primary btnsWrap delete">
+                                    删除
+                                </button>
+                                <button class="layui-btn layui-btn-primary addVotePeople" >
+                                    分享
+                                </button>
+                            </div>
+                            @*<button class="layui-btn layui-btn-primary">
+                                    最近上传
+                                </button>*@
+                            <div class="fr cancelChoose layui-hide" style="float:right;">
+                                <span>已选择<b id="nums">0</b>张</span>
+                                <button class="layui-btn layui-btn-normal" id="cancelChoose">取消选择</button>
+                            </div>
+                        </div>
+                        <div class="site-demo-flow" id="picFlow" @*style="height:843px;"*@>
+                            @foreach (var item in ViewData["imagelist"] as List<DateFiles>)
+                            {
+                                <div class="pictureLibrary">
+                                    <div class="pToolBar">
+                                        <input type="checkbox" title="@item.Date" name="" lay-skin="primary"
+                                               lay-filter="layAllChoose">
+                                        <button class="layui-btn layui-btn-radius layui-btn-primary layui-btn-xs openBtn">收起</button>
+                                    </div>
+
+                                    <div class="pContent clearfix">
+                                        @foreach (var img in item.List)
+                {
+                                            <div class="pBox">
+                                                <img src="@img.FileThumbnailUrl" layer-src="@img.Name" data-FileUrl="@img.FileUrl" alt="" id="p1">
+                                                <input type="checkbox" name="" lay-skin="primary" lay-filter="picForm">
+                                                <p class="pShawo"></p>
+                                                <i class="iconfont icon-fangdajing"></i>
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    @*分享弹出框*@
+                    <section class="layi-cloose-box radius" id="shareBox" style="display: none;">
+                        <div class="title"><span class="pl-20">选择用户</span><span class="f-r pr-20"><i class="layui-icon close_cloose" title="关闭">&#x1006;</i></span></div>
+                        <div class="all-per ml-10 mt-10">
+
+                            <div class="layi-search-box">
+                                <input class="layui-input input-bd-1 pl-30" type="text" id="keyword" placeholder="输入用户姓名" />
+                                <i class="layui-icon">&#xe615;</i>
+                            </div>
+                            <ul id="personlist">
+                                @{ foreach (var item in ViewData["list"] as List<Role_User>)
+                                    {
+                                        <li>
+                                            <a><i class="fa  fa-caret-right pl-5"></i> <span class="pl-5">@item.RoleName</span></a><div>
+                                                @{ if (item.Users != null)
+                                                    {
+                                                        string uid = Request.Cookies["User"]["uguid"];
+
+                                                        foreach (var i in item.Users)
+                                                        {
+                                                            if (i != null)
+                                                            {
+                                                                if (uid != i.Uid)
+                                                                {
+
+                                                                    <span data-c="0" data-uid="@i.Uid" data-name="@i.Name">@i.Name</span>
+                                                                }
+                                                            }
+
+
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </li>
+                                                    }}
+
+
+                            </ul>
+                        </div>
+                        <div class="cloose-per f-r mt-10 mr-10" id="wrap">
+                            <ul></ul>
+                        </div>
+                        <div class="layi-btn text-r">
+                            <a class="layui-btn layui-btn-sm layui-btn-primary mt-10 close_cloose">取消</a>
+                            <a class="layui-btn layui-btn-sm layui-btn-normal mt-10" id="lay-confirm">确定</a>
+                        </div>
+                    </section>
+                    <div class="table  pb-20">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--搜索 start-->
+    @*<div class="right-search show-btn"><i class="fa fa-search mt-10"></i></div>
+        <div class="seach-right-box">
+            <div class="title" id="close-box"><i class="fa fa-window-close-o"></i> 数据筛选</div>
+            <div class="seacher-body ml-10 layui-form">
+                <div class="s-block mb-10">
+                    <input type="text" class="s-input" placeholder="输入关键词搜索" id="r-search" />
+                </div>
+
+
+                <div class="s-btn-list">
+                    <a class="clean-btn" id="clean-btn">清除</a>
+                    <a class="layui-btn layui-btn-sm layui-btn-normal" id="seacher-btn">&nbsp;&nbsp;搜索&nbsp;&nbsp;</a>
+                </div>
+
+            </div>
+        </div>
+        <!--搜索 end-->
+        <!--搜索 end-->
+        <div class="right-search share-btn" style="top:700px;left:0px;"><i class="layui-icon" style="font-size:36px;">&#xe641;</i></div>*@
+</body>
+
+@Scripts.Render("~/Scripts/js/jquery.min.js", "~/Scripts/layui/layui.all.js", "~/Scripts/js/picture.js")
+
+
+
+

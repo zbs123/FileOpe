@@ -1,0 +1,102 @@
+﻿
+@using Utilities;
+@{
+    string userName = StorageHelper.Cookie.GetCookieValue("User", "name");
+    string sguid = StorageHelper.Cookie.GetCookieValue("User", "sguid");
+}
+<style>
+</style>
+
+<div class="header">
+    <div class="header-box">
+        <a href="/Index" class="logo mt-5 ml-30 f-l"><img src="~/Images/ilogo.png" /></a>
+        <!--顶部右侧菜单-->
+        <ul class="layui-nav" style="background:none" id="top-menu">
+            <li class="layui-nav-item  ml-15 "><a href="/Teacher/Index">首页</a></li>
+        </ul>
+        <ul class="layui-nav  top_menu pr-5 mr-20" style="background-color:#23262E">
+            <li class="layui-nav-item mr-15 " pc>
+                <a href="javascript:void(0)">
+                    <img src="~/Images/face.jpg" /><label>@userName</label>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>@Html.ActionLink("安全退出", "../Calendar/OutLogin")</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="~/Scripts/commonjs.js"></script>
+<script>
+    var innerUrlPath = window.location.pathname;
+    var suid = '@sguid';
+    ajax.getStr("/home/GetPower", null, function (obj) {
+        var json = JSON.parse(obj);
+        var data = json.menu;
+        console.log(data);
+        var innerHtml = "<li class='layui-nav-item  ml-15'><a href='/Teacher/Index'>首页</a></li>";
+        for (var i = 0; i < data.length; i++) {
+            var _cdata = data[i].child;
+            var check_top = false;
+            for (var j = 0; j < _cdata.length; j++) {
+                var _curl = _cdata[j].url.toUpperCase();
+                if (_curl.indexOf(innerUrlPath.toUpperCase()) != -1) {  //判断当前url路径的访问地址是否与权限加载的地址一样
+                    check_top = true;
+                }
+            }
+            if (check_top)  //地址一样选中头部
+            {
+                innerHtml += "<li class='layui-nav-item layui-this'>";
+                innerHtml += "<a data-url='" + _cdata[0].url + _cdata[0].pars + "' >" + data[i].name + "</a>";
+                innerHtml += "</li>";
+            } else {
+                if (_cdata.length != 0) {
+                    innerHtml += "<li class='layui-nav-item'>";
+                    innerHtml += "<a data-url='" + _cdata[0].url + _cdata[0].pars + "'  >" + data[i].name + "</a>";
+                    //var cinfo = data[i].child;
+                    innerHtml += "</li>";
+                }
+            }
+        }
+        // console.log(innerHtml);
+        $("#top-menu").html(innerHtml);
+    });
+    //function loadUrl(obj) {
+    //    debugger;
+    //    var url = obj.getAttribute("data-url");
+    //    ajax.getStr("/Api/GetUrlToken", null, function (token) {
+    //        var _url = url.replace(/{{token}}/g, token);
+    //        var o_url = _url.replace(/{{sguid}}/g, suid);
+    //        console.log(o_url);
+    //        console.log("---------------------------------");
+    //        //urlhref.Gourl(o_url);
+    //    })
+    //}
+    $(function () {
+        $(document).on("click", "#top-menu>li>a", function () {
+
+            //$("#top-menu>li>a").click(function () {
+
+            var obj = this;
+            var url = $(obj).attr("data-url");
+            $.ajax({
+                url: config.ajaxUrl + "/Api/GetUrlToken",
+                async: false,
+
+                type: "GET",
+                success: function (token) {
+
+                    var _url = url.replace(/{{token}}/g, token);
+                    var o_url = _url.replace(/{{sguid}}/g, suid);
+                    urlhref.Gourl(o_url);
+
+                }
+            })
+
+        })
+    })
+    window.onload = function () {
+        
+        
+    }
+</script>

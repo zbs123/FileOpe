@@ -1,0 +1,53 @@
+2018-03-09 09:39:59,588 [9] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 09:47:10,100 [19] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 09:48:28,918 [22] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 09:48:32,717 [17] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 09:48:54,558 [20] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 10:49:12,650 [61] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 10:59:44,020 [74] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:10:36,705 [82] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:13:05,686 [84] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:14:30,876 [98] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:18:29,935 [82] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:30:41,707 [77] ERROR log4netlogger - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ASP._Page_Views_Home_Index_cshtml.Execute() 位置 D:\asp.net\workspace\Platform\Platform\Views\Home\Index.cshtml:行号 60
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   在 System.Web.WebPages.StartPage.RunPage()
+   在 System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-03-09 11:30:51,455 [78] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:36:32,239 [66] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:37:33,620 [74] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:38:21,442 [65] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:38:50,533 [71] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:38:51,474 [65] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:39:13,867 [71] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:39:15,371 [84] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:40:17,333 [71] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:42:48,188 [83] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:43:22,132 [71] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:59:01,858 [98] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 11:59:28,312 [96] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 13:22:05,385 [61] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 13:24:10,292 [14] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:36:52,219 [127] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:38:28,831 [139] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:38:35,387 [132] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:40:38,723 [128] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:40:39,636 [138] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:40:39,638 [131] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:40:41,956 [127] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:41:11,457 [137] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:44:48,199 [127] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:52:11,439 [129] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F
+2018-03-09 14:58:40,047 [140] ERROR log4netlogger - 58B46A51FCD84FC9B1D721486AE8E57F

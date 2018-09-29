@@ -1,0 +1,67 @@
+﻿<style>
+</style>
+<div class="left f-l" id="powerLeft">
+    @*<a href="~/Role/Limit/@ViewBag.Sguid">权限管理</a>
+        <a href="~/Role/Index/@ViewBag.Sguid">角色管理</a>
+        <a href="~/Role/Models/@ViewBag.Sguid">功能模块</a>*@
+    <a href="~/Role/Models/@ViewBag.Sguid">全部文件</a>
+</div>
+<script src="~/Scripts/commonjs.js"></script>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    var innerUrlPath = window.location.pathname;
+    ajax.getStr("/home/GetInnerPower", null, function (obj) {
+
+        var json = JSON.parse(obj);
+        console.log(json);
+        var innerHtml = "";
+        var flag = false;
+        var count = 0;
+        for (var i = 0; i < json.length-1; i++) {
+            var url = json[i].url;
+            var upUrl = url.toUpperCase();//转大写
+            var acUrl = innerUrlPath.toUpperCase();//转大写
+            var pars = json[i].pars;
+            if (getQueryString("category")) {
+                flag = true;
+            } 
+            if (upUrl.indexOf('MYSHARE') != -1 && acUrl.indexOf('MYSHARE') != -1) {
+                if (flag) {
+                    if (count == 0) {
+                        innerHtml += "<a  data-url='" + url + pars + "' onclick='loadUrl(this)'>" + json[i].name + "</a>";
+                    } else {
+                        innerHtml += "<a   data-url='" + url + pars + "' style='background: #e0e6ee;color: #1E9FFF;border-radius: 3px;'>" + json[i].name + "</a>";
+                    }
+                } else {
+                    if (count == 0) {
+                        innerHtml += "<a   data-url='" + url + pars + "' style='background: #e0e6ee;color: #1E9FFF;border-radius: 3px;'>" + json[i].name + "</a>";
+                    } else {
+                        innerHtml += "<a  data-url='" + url + pars + "' onclick='loadUrl(this)'>" + json[i].name + "</a>";
+                    }
+                }
+                count++;
+            } else {
+                if (upUrl.indexOf(acUrl) != -1) {
+                    //console.log(getQueryString("category"))
+                    innerHtml += "<a   data-url='" + url + pars + "' style='background: #e0e6ee;color: #1E9FFF;border-radius: 3px;'>" + json[i].name + "</a>";
+                } else {
+                    
+                        innerHtml += "<a  data-url='" + url + pars + "' onclick='loadUrl(this)'>" + json[i].name + "</a>";
+                }
+            }
+        }
+        $("#powerLeft").html(innerHtml);
+    });
+    function loadUrl(obj) {
+        var url = obj.getAttribute("data-url");
+        ajax.getStr("/Api/GetUrlToken", null, function (token) {
+            var _url = url.replace(/{{token}}/g, token);
+            urlhref.Gourl(_url);
+        })
+    }
+</script>

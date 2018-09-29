@@ -1,0 +1,16 @@
+D:\asp.net\workspace\Platform\Common\bin\Debug\Common.dll
+D:\asp.net\workspace\Platform\Common\bin\Debug\Common.pdb
+D:\asp.net\workspace\Platform\Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\asp.net\workspace\Platform\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform\Common\obj\Debug\Common.dll
+D:\asp.net\workspace\Platform\Common\obj\Debug\Common.pdb
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\Common.dll
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\Common.pdb
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\DB.dll
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\MySql.Data.dll
+D:\asp.net\workspace\Platform_File\Common\bin\Debug\DB.pdb
+D:\asp.net\workspace\Platform_File\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\asp.net\workspace\Platform_File\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\asp.net\workspace\Platform_File\Common\obj\Debug\Common.dll
+D:\asp.net\workspace\Platform_File\Common\obj\Debug\Common.pdb

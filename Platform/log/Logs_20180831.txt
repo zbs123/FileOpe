@@ -1,0 +1,255 @@
+2018-08-31 09:29:36,263
+ [5] ERROR WebLogger - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Platform.Controllers.BaseController.GetInnerPower() 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\BaseController.cs:行号 31
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 09:29:36,309
+ [8] ERROR WebLogger - System.Security.Cryptography.CryptographicException: 不正确的数据。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   在 System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   在 System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   在 Utilities.Encryption.DESDeCode(String pToDecrypt, String sKey) 位置 D:\PlatformOS\Utilities\Encryption.cs:行号 96
+   在 Common.AuthenticationAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\AuthenticationAttribute.cs:行号 30
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+2018-08-31 09:34:42,236
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:34:42,236
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:34,784
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:34,784
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:35,647
+ [16] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:35,647
+ [16] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:36,479
+ [21] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:36,480
+ [21] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:37,232
+ [16] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:35:37,232
+ [16] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:47:04,101
+ [11] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:47:04,101
+ [11] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:18,189
+ [25] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:18,189
+ [25] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:37,576
+ [25] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:37,576
+ [25] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:47,844
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:47,845
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:57,641
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:53:57,641
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:54:14,787
+ [27] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:54:14,787
+ [27] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:56:33,649
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:56:33,649
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:56:39,707
+ [27] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:56:39,707
+ [27] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:57:05,794
+ [21] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:57:05,794
+ [21] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:57:11,311
+ [24] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 09:57:11,311
+ [24] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:03:28,732
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:03:28,732
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:03:32,460
+ [23] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:03:32,461
+ [23] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:05:48,383
+ [5] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:05:48,383
+ [5] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:07:03,028
+ [13] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:07:03,028
+ [13] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:11:23,835
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:11:23,835
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:11:30,777
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:11:30,777
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:12:20,638
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:12:20,638
+ [22] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:12:29,592
+ [10] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:12:29,592
+ [10] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:26:20,130
+ [26] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:26:20,130
+ [26] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:29:39,368
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:29:39,368
+ [20] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:31:26,447
+ [34] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:31:26,448
+ [34] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:36:53,035
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:36:53,036
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:39:47,097
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:39:47,098
+ [18] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:40:33,546
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:40:33,546
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:40:47,401
+ [12] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:40:47,402
+ [12] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:41:15,558
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 10:41:15,559
+ [8] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 11:04:02,541
+ [41] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 11:04:02,541
+ [41] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 11:08:50,492
+ [10] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 11:08:50,492
+ [10] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-08-31 16:03:23,014
+ [71] ERROR WebLogger - MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 Dapper.SqlMapper.<MultiMapImpl>d__140`8.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 Dapper.SqlMapper.Query[TFirst,TSecond,TReturn](IDbConnection cnn, String sql, Func`3 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 DAL.Selete.GetDeptUsers(String schoolid) 位置 D:\asp.net\workspace\Platform_File\Dal\Selete.cs:行号 24
+   在 BLL.ShareBll.GetUser(String schoolid) 位置 D:\asp.net\workspace\Platform_File\BLL\ShareBll.cs:行号 37
+   在 Platform.Controllers.HomeController.pageOne(String path, String type, String search, String token) 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\HomeController.cs:行号 107
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 16:08:47,581
+ [83] ERROR WebLogger - System.Security.Cryptography.CryptographicException: 不正确的数据。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   在 System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   在 System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   在 Utilities.Encryption.DESDeCode(String pToDecrypt, String sKey) 位置 D:\PlatformOS\Utilities\Encryption.cs:行号 96
+   在 Common.AuthenticationAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\AuthenticationAttribute.cs:行号 30
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+2018-08-31 17:09:24,868
+ [14] ERROR WebLogger - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Platform.Controllers.BaseController.GetInnerPower() 位置 D:\asp.net\workspace\Platform_File\Platform\Controllers\BaseController.cs:行号 31
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 17:09:25,087
+ [14] ERROR WebLogger - System.Security.Cryptography.CryptographicException: 不正确的数据。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   在 System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   在 System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   在 System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   在 Utilities.Encryption.DESDeCode(String pToDecrypt, String sKey) 位置 D:\PlatformOS\Utilities\Encryption.cs:行号 96
+   在 Common.AuthenticationAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 D:\asp.net\workspace\Platform_File\Platform\Common\AuthenticationAttribute.cs:行号 30
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.InvokeActionMethodFilterAsynchronouslyRecursive(Int32 filterIndex)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)

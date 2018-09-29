@@ -1,0 +1,187 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Head.cshtml";
+    @Styles.Render("~/Content/css/page.css");
+
+}
+
+<style type="text/css">
+    #viewck div {
+        width: 20px;
+        height: 20px;
+        float: left;
+        background-color: #cccccc;
+        border: 1px solid #ffffff;
+    }
+
+    #viewck div.has {
+        background-color: green;
+        text-align: center;
+    }
+    .layui-table th, .layui-table td{
+        text-align: left;
+    }
+    .layui-form-checkbox i {
+        width: 14px;
+    }
+
+    .layui-form-checked, .layui-form-checked:hover {
+        border-color: #1E9FFF;
+    }
+
+    .layui-form-checked[lay-skin=primary] i {
+        border-color: #1E9FFF;
+        background-color: #fff;
+        color: #1E9FFF;
+    }
+
+    .layui-form-checkbox[lay-skin=primary]:hover i {
+        border-color: #1E9FFF;
+        color: #1E9FFF;
+    }
+
+    .layui-form-checked[lay-skin=primary]:hover i {
+        border-color: #1E9FFF;
+        background-color: #fff;
+        color: #1E9FFF;
+    }
+</style>
+
+
+@*<div class="content-pannel-buttons" style="border-bottom:1px solid #cccccc">
+        @*<a onclick="" id="picker"><b class="p-icon-upload">选择文件</b></a>
+        <button onclick="start()"><b class="p-icon-add">开始</b></button>
+        <button onclick="stop()"><b class="p-icon-edit">暂停</b></button>
+    </div>
+    <div id="filesss" class="file">
+    </div>
+    <div id="thelist"></div>
+    <div id="viewck" style="padding:15px;">
+    </div>*@
+<body class="body">
+    <div class="layui-form" action="">
+        @Html.Partial("~/Views/Shared/Top.cshtml")
+        <div class="index-box" style="padding-top:80px;">
+            @Html.Partial("~/Views/Shared/roleLeft.cshtml", ViewData["page"] = "StudentList")
+            <div class="right f-l ml-20">
+                <div class="title">
+                    <div class="t-l">文档管理</div>
+                </div>
+                <div class="table-box" style="margin-bottom:80px;">
+                    @*<o class="text f-l pl-10">
+                            共有<span id="countdata">--</span>条数据
+                        </o>
+                        <o class="option f-r">
+                            <btn class="mr-10">
+                                <a class="current" href="../Student?sguid=@ViewBag.Sguid">添加学生</a>
+                                <a class="mr-5" id="more-option" data-is="0">
+                                    批量操作 <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li data-com="disable">批量禁用</li>
+                                        <li data-com="delete">批量删除</li>
+                                    </ul>
+                                </a>
+                                <a id="import">导入数据</a>
+                                <a id="export">导出数据</a>
+                            </btn>
+                        </o>*@
+                    <div class="clearfix" style="background: #fff;position: relative;">
+                        <div class="table-top clearfix">
+                            <div class="btnsWrap" style="float:left;font-size: 16px;color: #666;">
+                                共<span id="listcount"></span>条数据
+                            </div>
+                            <div class="fl btnsWrap">
+                                <button class="layui-btn layui-btn-primary layui-hide" id="down">
+                                     下载
+                                </button>
+                                <button class="layui-btn layui-btn-primary layui-hide" id="delete">
+                                     取消分享
+                                </button>
+                                <input type="hidden" id="shareid" />
+                            </div>
+                        </div>
+                        <div class="reminds">
+                            <span class="layui-breadcrumb fl" id="breadcrumb" style="float:left;">
+                                <a href="myshare?category=@ViewBag.category">全部文件</a>
+                                @*@foreach (var p in ViewBag.remindPath)
+                    {
+                        <a href="pageOne?path=@p.Address">@p.Name</a>
+                    }*@
+                            </span>
+                            &nbsp;
+                            @*已全部加载，共<span id="listcount"></span>个*@
+                        </div>
+                        <input type="hidden" id="filepath" value="@ViewBag.filepath" />
+                        <input type="hidden" id="category" value="@ViewBag.category" />
+                        <table class="layui-hide" id="test" lay-filter="tableTest"></table>
+                        <div class="noData layui-hide" id="noData">
+                            <img src="../images/noData.png" alt="">
+                            <p>您还没有分享过文件～</p>
+                        </div>
+
+                    </div>
+                    <div class="table  pb-20">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--搜索 start-->
+    <div class="right-search show-btn"><i class="fa fa-search mt-10"></i></div>
+    <div class="seach-right-box">
+        <div class="title" id="close-box"><i class="layui-icon">&#x1006;</i> 数据筛选</div>
+        <div class="seacher-body ml-10 layui-form">
+            <div class="s-block mb-10">
+                <span>文件名</span>
+                <input type="text" class="s-input" placeholder="输入关键词搜索" id="r-search-name" />
+            </div>
+            <div class="s-block mb-10">
+                <span>日期</span>
+                <input type="text" class="s-input" id="r-search-date" placeholder="选择日期范围">
+                <input type="hidden" id="start" />
+                <input type="hidden" id="end" />
+                @*<input type="text" class="s-input" placeholder="输入关键词搜索" id="r-search" />*@
+            </div>
+            <div class="s-block mb-10">
+                <span>类型</span>
+                <input type="text" class="s-input" placeholder="输入文件后缀搜索" id="r-search-type" />
+            </div>
+
+            <div class="s-btn-list">
+                <a class="clean-btn" id="clean-btn">清除</a>
+                <a class="layui-btn layui-btn-sm layui-btn-normal" id="seacher-btn">&nbsp;&nbsp;搜索&nbsp;&nbsp;</a>
+            </div>
+
+        </div>
+    </div>
+    <!--搜索 end-->
+</body>
+
+
+<!--文件图标添加-->
+<script type="text/html" id="fileName">
+
+    {{#  if(d.Type === '1'){ }}
+    <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/wenjianjia.png" alt="">{{ d.Name }}</span>
+    {{#  } else if(d.Type === '3') { }}
+    <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/wenjianjia.png" alt="">{{ d.Name }}</span>
+    {{#  } else { }}
+    <span data-fileurl='{{ d.FileUrl }}' data-shareid='{{d.Shareid}}'><img src="../images/{{ d.Type }}.png" alt="">{{ d.Name }}</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="userName">
+   
+    {{#  if(d.Username.indexOf(',') >0){ }}
+    <span class="un" data-uname="{{d.Username}}">{{ d.Username.split(',')[0] }}...</span>
+    {{#  } else { }}
+          {{ d.Username }}
+    {{#  } }}
+    
+
+</script>
+
+@Scripts.Render("~/Scripts/js/jquery.min.js", "~/Scripts/layui/layui.all.js", "~/Scripts/js/myShare.js")
+
+

@@ -1,0 +1,98 @@
+2018-09-29 09:36:16,100
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:36:16,110
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:36:16,111
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:36:16,111
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:36:16,112
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:36:16,112
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:36:16,112
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:42,886
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:42,887
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:42,888
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:37:42,888
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:42,888
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:42,888
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:42,888
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:45,615
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:45,615
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:45,616
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:37:45,617
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:45,617
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:45,617
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:45,617
+ [15] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:53,151
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:53,151
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:53,152
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:37:53,153
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:53,153
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:53,153
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:53,153
+ [6] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:56,159
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:56,159
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:37:56,160
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:37:56,161
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:56,161
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:56,161
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:37:56,161
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:06,590
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:38:06,591
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:38:06,592
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:38:06,592
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:06,592
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:06,592
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:06,592
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:09,423
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:38:09,423
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\/File/f4b2b995ac414623b779467f8a8f5946
+2018-09-29 09:38:09,424
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(1)1
+2018-09-29 09:38:09,424
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:09,424
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:09,425
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
+2018-09-29 09:38:09,425
+ [7] ERROR WebLogger - D:\asp.net\workspace\Platform_File\Platform\File\f4b2b995ac414623b779467f8a8f5946\新建文件夹(2)
